@@ -3,4 +3,4 @@ project(EpidemicManagementSystem C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(EpidemicManagementSystem)
+add_executable(EpidemicManagementSystem LinkList.c LinkList.h main.c Data.h Data.c)

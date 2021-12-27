@@ -1,7 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/zitao/Code/C:C++/EpidemicManagementSystem
+"/Users/zitao/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/zitao/Code/C:C++/EpidemicManagementSystem
 -- Configuring done
-CMake Error at CMakeLists.txt:6 (add_executable):
-  No SOURCES given to target: EpidemicManagementSystem
-
-
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+-- Generating done
+-- Build files have been written to: /Users/zitao/Code/C:C++/EpidemicManagementSystem/cmake-build-debug

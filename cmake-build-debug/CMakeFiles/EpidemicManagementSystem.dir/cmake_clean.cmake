@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/EpidemicManagementSystem.dir/Data.c.o"
+  "CMakeFiles/EpidemicManagementSystem.dir/LinkList.c.o"
   "CMakeFiles/EpidemicManagementSystem.dir/main.c.o"
   "EpidemicManagementSystem"
   "EpidemicManagementSystem.pdb"
