@@ -56,8 +56,6 @@ void getDataFromFile(Data *data, const char *filePath);
 
 Data *createDataNode();
 
-bool isDataValid(Data *data);
-
 void printData(Data *data);
 
 Data *initDataNode(Data *data);
