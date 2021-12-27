@@ -1,7 +1,3 @@
-//
-// Created by 小学二年级的刘同学 on 2021/10/8.
-//
-
 #ifndef LINKLIST_LINKLIST_H
 
 #include <stdlib.h>

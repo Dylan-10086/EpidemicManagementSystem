@@ -1,6 +1,3 @@
-//
-// Created by 小学二年级的刘同学 on 2021/10/8.
-//
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
