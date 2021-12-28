@@ -1,25 +1,26 @@
-#include "Data.h"
+#include "VisitorInfo.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "Utils.h"
 
-Data *createDataNode() {
-    return (Data *) malloc(sizeof(Data));
+VisitorInfo *createVisitorInfo() {
+    return (VisitorInfo *) malloc(sizeof(VisitorInfo));
 }
 
-Data *initDataNode(Data *data) {
-    getName(data);
-    getPhoneNum(data);
-    getArriveTime(data);
-    getLeaveTime(data);
-    getFromWhere(data);
-    getHealthCode(data);
-    getRemarks(data);
+VisitorInfo *initVisitorInfo(VisitorInfo *data) {
+    getVisitorName(data);
+    getVisitorPhoneNum(data);
+    getVisitorArriveTime(data);
+    getVisitorLeaveTime(data);
+    getVisitorFromWhere(data);
+    getVisitorHealthCode(data);
+    getVisitorRemarks(data);
 
     return data;
 }
 
-void getName(Data *data) {
+void getVisitorName(VisitorInfo *data) {
     printf("\n请输入人员姓名:\n");
 
     char temp[50];
@@ -33,7 +34,7 @@ void getName(Data *data) {
     strcpy(data->name, temp);
 }
 
-void getPhoneNum(Data *data) {
+void getVisitorPhoneNum(VisitorInfo *data) {
     printf("\n请输入电话号码:\n");
 
     char temp[50];
@@ -47,7 +48,7 @@ void getPhoneNum(Data *data) {
     strcpy(data->phoneNum, temp);
 }
 
-void getArriveTime(Data *data) {
+void getVisitorArriveTime(VisitorInfo *data) {
     printf("\n请输入人员到达时间(?年?月?日?时?分, 空格隔开):\n");
 
     int year = -1, month = -1, day = -1, hour = -1, min = -1;
@@ -68,7 +69,7 @@ void getArriveTime(Data *data) {
     data->arriveTime = time;
 }
 
-void getLeaveTime(Data *data) {
+void getVisitorLeaveTime(VisitorInfo *data) {
     printf("\n请输入人员离开时间(?年?月?日?时?分, 空格隔开):\n");
 
     int year = -1, month = -1, day = -1, hour = -1, min = -1;
@@ -92,13 +93,13 @@ void getLeaveTime(Data *data) {
     data->leaveTime = time;
 }
 
-void getFromWhere(Data *data) {
+void getVisitorFromWhere(VisitorInfo *data) {
     printf("\n请输入人员出发地:\n");
 
     char temp[50];
     scanf("%s", temp);
 
-    while (!isAddressValid(temp)) {
+    while (!isVisitorAddressValid(temp)) {
         printf("输入错误,请重新输入!\n");
         scanf("%s", temp);
     }
@@ -106,7 +107,7 @@ void getFromWhere(Data *data) {
     strcpy(data->fromWhere, temp);
 }
 
-void getHealthCode(Data *data) {
+void getVisitorHealthCode(VisitorInfo *data) {
     printf("\n请输入健康码情况(0:红; 1:黄; 2:绿):\n");
 
     unsigned short int temp;
@@ -120,7 +121,7 @@ void getHealthCode(Data *data) {
     data->HealthCode = temp;
 }
 
-void getRemarks(Data *data) {
+void getVisitorRemarks(VisitorInfo *data) {
     printf("请输入备注(可留空):\n");
 
     char temp;
@@ -134,7 +135,7 @@ void getRemarks(Data *data) {
     strcpy(data->remarks, str);
 }
 
-void printData(Data *data) {
+void printData(VisitorInfo *data) {
     char *code;
     char red[] = "红码";
     char yellow[] = "黄码";
@@ -157,42 +158,3 @@ void printData(Data *data) {
            data->fromWhere, code);
 }
 
-bool isHealthCodeValid(unsigned short int code) {
-    if (0 <= code && code <= 2) {
-        return true;
-    }
-
-    return false;
-}
-
-bool isAddressValid(const char *address) {
-    return strlen(address) >= 0;
-}
-
-bool isTimeValid(Time *time) {
-    if (time->tm_mon <= 0 || time->tm_mon > 12) {
-        return false;
-    }
-
-    if (time->tm_mday <= 0 || time->tm_mday > 31) {
-        return false;
-    }
-
-    if (time->tm_hour < 0 || time->tm_hour >= 24) {
-        return false;
-    }
-
-    if (time->tm_min < 0 || time->tm_min >= 60) {
-        return false;
-    }
-
-    return true;
-}
-
-bool isPhoneNumValid(const char *phoneNum) {
-    return strlen(phoneNum) == 11;
-}
-
-bool isNameValid(const char *name) {
-    return strlen(name) != 0;
-}

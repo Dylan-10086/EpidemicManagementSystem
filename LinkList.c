@@ -7,7 +7,7 @@
 LinkList *createList() {
     LinkList *head = (LinkList *) malloc(sizeof(LinkList));
 
-    head->data = (Data *) malloc(sizeof(Data));
+    head->data = (VisitorInfo *) malloc(sizeof(VisitorInfo));
     head->data->HealthCode = 0;
     strcat(head->data->name, "个数");
     head->next = NULL;
@@ -15,7 +15,7 @@ LinkList *createList() {
     return head;
 }
 
-LinkList *createNode(Data *val) {
+LinkList *createNode(VisitorInfo *val) {
     LinkList *cur_node = (LinkList *) malloc(sizeof(LinkList));
     cur_node->data = val;
     cur_node->next = NULL;
@@ -23,7 +23,7 @@ LinkList *createNode(Data *val) {
     return cur_node;
 }
 
-void add(LinkList *head, Data *val) {
+void add(LinkList *head, VisitorInfo *val) {
     LinkList *cur_node = createNode(val);
 
     cur_node->next = head->next;
@@ -32,7 +32,7 @@ void add(LinkList *head, Data *val) {
     head->data->HealthCode++;
 }
 
-void append(LinkList *head, Data *val) {
+void append(LinkList *head, VisitorInfo *val) {
     LinkList *cur_node = createNode(val);
     LinkList *p = head;
 
@@ -44,7 +44,7 @@ void append(LinkList *head, Data *val) {
     head->data->HealthCode++;
 }
 
-LinkList *fromNums(Data val[], size_t len) {
+LinkList *fromNums(VisitorInfo val[], size_t len) {
     LinkList *head = createList();
     LinkList *p = head;
 
@@ -90,7 +90,7 @@ LinkList *getByIndex(LinkList *head, size_t index) {
     return p->next;
 }
 
-void toNums(Data **nums, LinkList *head) {
+void toNums(VisitorInfo **nums, LinkList *head) {
     size_t len = head->data->HealthCode;
     head = head->next;
 

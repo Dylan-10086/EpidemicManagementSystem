@@ -129,30 +129,6 @@ EpidemicManagementSystem/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/build
 .PHONY : EpidemicManagementSystem/fast
 
-Data.o: Data.c.o
-.PHONY : Data.o
-
-# target to build an object file
-Data.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/Data.c.o
-.PHONY : Data.c.o
-
-Data.i: Data.c.i
-.PHONY : Data.i
-
-# target to preprocess a source file
-Data.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/Data.c.i
-.PHONY : Data.c.i
-
-Data.s: Data.c.s
-.PHONY : Data.s
-
-# target to generate assembly for a file
-Data.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/Data.c.s
-.PHONY : Data.c.s
-
 LinkList.o: LinkList.c.o
 .PHONY : LinkList.o
 
@@ -176,6 +152,78 @@ LinkList.s: LinkList.c.s
 LinkList.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/LinkList.c.s
 .PHONY : LinkList.c.s
+
+ResidentInfo.o: ResidentInfo.c.o
+.PHONY : ResidentInfo.o
+
+# target to build an object file
+ResidentInfo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.o
+.PHONY : ResidentInfo.c.o
+
+ResidentInfo.i: ResidentInfo.c.i
+.PHONY : ResidentInfo.i
+
+# target to preprocess a source file
+ResidentInfo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.i
+.PHONY : ResidentInfo.c.i
+
+ResidentInfo.s: ResidentInfo.c.s
+.PHONY : ResidentInfo.s
+
+# target to generate assembly for a file
+ResidentInfo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.s
+.PHONY : ResidentInfo.c.s
+
+Utils.o: Utils.c.o
+.PHONY : Utils.o
+
+# target to build an object file
+Utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/Utils.c.o
+.PHONY : Utils.c.o
+
+Utils.i: Utils.c.i
+.PHONY : Utils.i
+
+# target to preprocess a source file
+Utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/Utils.c.i
+.PHONY : Utils.c.i
+
+Utils.s: Utils.c.s
+.PHONY : Utils.s
+
+# target to generate assembly for a file
+Utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/Utils.c.s
+.PHONY : Utils.c.s
+
+VisitorInfo.o: VisitorInfo.c.o
+.PHONY : VisitorInfo.o
+
+# target to build an object file
+VisitorInfo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.o
+.PHONY : VisitorInfo.c.o
+
+VisitorInfo.i: VisitorInfo.c.i
+.PHONY : VisitorInfo.i
+
+# target to preprocess a source file
+VisitorInfo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.i
+.PHONY : VisitorInfo.c.i
+
+VisitorInfo.s: VisitorInfo.c.s
+.PHONY : VisitorInfo.s
+
+# target to generate assembly for a file
+VisitorInfo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.s
+.PHONY : VisitorInfo.c.s
 
 main.o: main.c.o
 .PHONY : main.o
@@ -210,12 +258,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... EpidemicManagementSystem"
-	@echo "... Data.o"
-	@echo "... Data.i"
-	@echo "... Data.s"
 	@echo "... LinkList.o"
 	@echo "... LinkList.i"
 	@echo "... LinkList.s"
+	@echo "... ResidentInfo.o"
+	@echo "... ResidentInfo.i"
+	@echo "... ResidentInfo.s"
+	@echo "... Utils.o"
+	@echo "... Utils.i"
+	@echo "... Utils.s"
+	@echo "... VisitorInfo.o"
+	@echo "... VisitorInfo.i"
+	@echo "... VisitorInfo.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

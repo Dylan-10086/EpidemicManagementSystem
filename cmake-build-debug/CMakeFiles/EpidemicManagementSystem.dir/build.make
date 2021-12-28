@@ -92,34 +92,64 @@ CMakeFiles/EpidemicManagementSystem.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/EpidemicManagementSystem.dir/main.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/zitao/Code/C:C++/EpidemicManagementSystem/main.c -o CMakeFiles/EpidemicManagementSystem.dir/main.c.s
 
-CMakeFiles/EpidemicManagementSystem.dir/Data.c.o: CMakeFiles/EpidemicManagementSystem.dir/flags.make
-CMakeFiles/EpidemicManagementSystem.dir/Data.c.o: ../Data.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zitao/Code/C:C++/EpidemicManagementSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/EpidemicManagementSystem.dir/Data.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/EpidemicManagementSystem.dir/Data.c.o -c /Users/zitao/Code/C:C++/EpidemicManagementSystem/Data.c
+CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.o: CMakeFiles/EpidemicManagementSystem.dir/flags.make
+CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.o: ../VisitorInfo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zitao/Code/C:C++/EpidemicManagementSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.o -c /Users/zitao/Code/C:C++/EpidemicManagementSystem/VisitorInfo.c
 
-CMakeFiles/EpidemicManagementSystem.dir/Data.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/EpidemicManagementSystem.dir/Data.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/zitao/Code/C:C++/EpidemicManagementSystem/Data.c > CMakeFiles/EpidemicManagementSystem.dir/Data.c.i
+CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/zitao/Code/C:C++/EpidemicManagementSystem/VisitorInfo.c > CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.i
 
-CMakeFiles/EpidemicManagementSystem.dir/Data.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/EpidemicManagementSystem.dir/Data.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/zitao/Code/C:C++/EpidemicManagementSystem/Data.c -o CMakeFiles/EpidemicManagementSystem.dir/Data.c.s
+CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/zitao/Code/C:C++/EpidemicManagementSystem/VisitorInfo.c -o CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.s
+
+CMakeFiles/EpidemicManagementSystem.dir/Utils.c.o: CMakeFiles/EpidemicManagementSystem.dir/flags.make
+CMakeFiles/EpidemicManagementSystem.dir/Utils.c.o: ../Utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zitao/Code/C:C++/EpidemicManagementSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/EpidemicManagementSystem.dir/Utils.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/EpidemicManagementSystem.dir/Utils.c.o -c /Users/zitao/Code/C:C++/EpidemicManagementSystem/Utils.c
+
+CMakeFiles/EpidemicManagementSystem.dir/Utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/EpidemicManagementSystem.dir/Utils.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/zitao/Code/C:C++/EpidemicManagementSystem/Utils.c > CMakeFiles/EpidemicManagementSystem.dir/Utils.c.i
+
+CMakeFiles/EpidemicManagementSystem.dir/Utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/EpidemicManagementSystem.dir/Utils.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/zitao/Code/C:C++/EpidemicManagementSystem/Utils.c -o CMakeFiles/EpidemicManagementSystem.dir/Utils.c.s
+
+CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.o: CMakeFiles/EpidemicManagementSystem.dir/flags.make
+CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.o: ../ResidentInfo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zitao/Code/C:C++/EpidemicManagementSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.o -c /Users/zitao/Code/C:C++/EpidemicManagementSystem/ResidentInfo.c
+
+CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/zitao/Code/C:C++/EpidemicManagementSystem/ResidentInfo.c > CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.i
+
+CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/zitao/Code/C:C++/EpidemicManagementSystem/ResidentInfo.c -o CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.s
 
 # Object files for target EpidemicManagementSystem
 EpidemicManagementSystem_OBJECTS = \
 "CMakeFiles/EpidemicManagementSystem.dir/LinkList.c.o" \
 "CMakeFiles/EpidemicManagementSystem.dir/main.c.o" \
-"CMakeFiles/EpidemicManagementSystem.dir/Data.c.o"
+"CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.o" \
+"CMakeFiles/EpidemicManagementSystem.dir/Utils.c.o" \
+"CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.o"
 
 # External object files for target EpidemicManagementSystem
 EpidemicManagementSystem_EXTERNAL_OBJECTS =
 
 EpidemicManagementSystem: CMakeFiles/EpidemicManagementSystem.dir/LinkList.c.o
 EpidemicManagementSystem: CMakeFiles/EpidemicManagementSystem.dir/main.c.o
-EpidemicManagementSystem: CMakeFiles/EpidemicManagementSystem.dir/Data.c.o
+EpidemicManagementSystem: CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.o
+EpidemicManagementSystem: CMakeFiles/EpidemicManagementSystem.dir/Utils.c.o
+EpidemicManagementSystem: CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.o
 EpidemicManagementSystem: CMakeFiles/EpidemicManagementSystem.dir/build.make
 EpidemicManagementSystem: CMakeFiles/EpidemicManagementSystem.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zitao/Code/C:C++/EpidemicManagementSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable EpidemicManagementSystem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zitao/Code/C:C++/EpidemicManagementSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable EpidemicManagementSystem"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EpidemicManagementSystem.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

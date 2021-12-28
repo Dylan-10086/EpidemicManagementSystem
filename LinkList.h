@@ -1,12 +1,12 @@
 #ifndef LINKLIST_LINKLIST_H
 
 #include <stdlib.h>
-#include "Data.h"
+#include "VisitorInfo.h"
 #include <stdbool.h>
 
 
 typedef struct List {
-    Data *data;
+    VisitorInfo *data;
     struct List *next;
 } LinkList;
 
@@ -17,9 +17,9 @@ typedef struct List {
  * @param val
  * @return
  */
-void append(LinkList *head, Data *val);
+void append(LinkList *head, VisitorInfo *val);
 
-void add(LinkList *head, Data *val);
+void add(LinkList *head, VisitorInfo *val);
 
 /**
  * 按索引获取元素，索引的行为和数组相同
@@ -34,13 +34,13 @@ LinkList *getByIndex(LinkList *head, size_t index);
  * @param val
  * @return
  */
-LinkList *createNode(Data *val);
+LinkList *createNode(VisitorInfo *val);
 
 LinkList *createList();
 
 void removeByIndex(LinkList *head, size_t index);
 
-void toNums(Data **nums, LinkList *head);
+void toNums(VisitorInfo **nums, LinkList *head);
 
 void printList(LinkList *head);
 
