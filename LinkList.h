@@ -40,6 +40,8 @@ LinkList *createList();
 
 void removeByIndex(LinkList *head, size_t index);
 
+void toNums(Data **nums, LinkList *head);
+
 void printList(LinkList *head);
 
 #define LINKLIST_LINKLIST_H

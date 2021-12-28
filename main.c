@@ -1,14 +1,21 @@
 #include <stdio.h>
 #include "LinkList.h"
 
+
 int main() {
     LinkList *list = createList();
 
     for (int i = 0; i < 2; i++) {
-        add(list, initDataNode(createDataNode()));
+        append(list, initDataNode(createDataNode()));
     }
 
-    printList(list);
+    Data *nums[list->data->HealthCode];
 
+    toNums(nums, list);
+
+
+    for (int i = 0; i < 2; i++) {
+        printData(nums[i]);
+    }
     return 0;
 }

@@ -90,6 +90,15 @@ LinkList *getByIndex(LinkList *head, size_t index) {
     return p->next;
 }
 
+void toNums(Data **nums, LinkList *head) {
+    size_t len = head->data->HealthCode;
+    head = head->next;
+
+    for (int i = 0; i < len; i++, head = head->next) {
+        nums[i] = head->data;
+    }
+}
+
 void printList(LinkList *head) {
     head = head->next;
     while (head) {
