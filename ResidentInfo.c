@@ -86,3 +86,33 @@ void getResidentIsolationStatus(ResidentInfo *info) {
 
     strcpy(info->name, temp);
 }
+
+void printData(ResidentInfo *data) {
+    char *code, *isolation;
+    char red[] = "红码";
+    char yellow[] = "黄码";
+    char green[] = "绿码";
+    char yes[] = "是";
+    char no[] = "否";
+
+
+    switch (data->HealthCode) {
+        case RED:
+            code = red;
+            break;
+        case YELLOW:
+            code = yellow;
+            break;
+        case GREEN:
+            code = green;
+            break;
+    }
+
+    if (data->isolation) {
+        isolation = yes;
+    } else {
+        isolation = no;
+    }
+
+    printf("%s %s %d-%d %s %s", data->name, data->phoneNum, data->buildingNum, data->houseNum, code, isolation);
+}

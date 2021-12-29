@@ -129,30 +129,6 @@ EpidemicManagementSystem/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/build
 .PHONY : EpidemicManagementSystem/fast
 
-LinkList.o: LinkList.c.o
-.PHONY : LinkList.o
-
-# target to build an object file
-LinkList.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/LinkList.c.o
-.PHONY : LinkList.c.o
-
-LinkList.i: LinkList.c.i
-.PHONY : LinkList.i
-
-# target to preprocess a source file
-LinkList.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/LinkList.c.i
-.PHONY : LinkList.c.i
-
-LinkList.s: LinkList.c.s
-.PHONY : LinkList.s
-
-# target to generate assembly for a file
-LinkList.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/LinkList.c.s
-.PHONY : LinkList.c.s
-
 ResidentInfo.o: ResidentInfo.c.o
 .PHONY : ResidentInfo.o
 
@@ -176,6 +152,30 @@ ResidentInfo.s: ResidentInfo.c.s
 ResidentInfo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.s
 .PHONY : ResidentInfo.c.s
+
+ResidentInfoList.o: ResidentInfoList.c.o
+.PHONY : ResidentInfoList.o
+
+# target to build an object file
+ResidentInfoList.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/ResidentInfoList.c.o
+.PHONY : ResidentInfoList.c.o
+
+ResidentInfoList.i: ResidentInfoList.c.i
+.PHONY : ResidentInfoList.i
+
+# target to preprocess a source file
+ResidentInfoList.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/ResidentInfoList.c.i
+.PHONY : ResidentInfoList.c.i
+
+ResidentInfoList.s: ResidentInfoList.c.s
+.PHONY : ResidentInfoList.s
+
+# target to generate assembly for a file
+ResidentInfoList.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/ResidentInfoList.c.s
+.PHONY : ResidentInfoList.c.s
 
 Utils.o: Utils.c.o
 .PHONY : Utils.o
@@ -225,6 +225,30 @@ VisitorInfo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.s
 .PHONY : VisitorInfo.c.s
 
+VisitorInfoList.o: VisitorInfoList.c.o
+.PHONY : VisitorInfoList.o
+
+# target to build an object file
+VisitorInfoList.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/VisitorInfoList.c.o
+.PHONY : VisitorInfoList.c.o
+
+VisitorInfoList.i: VisitorInfoList.c.i
+.PHONY : VisitorInfoList.i
+
+# target to preprocess a source file
+VisitorInfoList.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/VisitorInfoList.c.i
+.PHONY : VisitorInfoList.c.i
+
+VisitorInfoList.s: VisitorInfoList.c.s
+.PHONY : VisitorInfoList.s
+
+# target to generate assembly for a file
+VisitorInfoList.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/VisitorInfoList.c.s
+.PHONY : VisitorInfoList.c.s
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -258,18 +282,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... EpidemicManagementSystem"
-	@echo "... LinkList.o"
-	@echo "... LinkList.i"
-	@echo "... LinkList.s"
 	@echo "... ResidentInfo.o"
 	@echo "... ResidentInfo.i"
 	@echo "... ResidentInfo.s"
+	@echo "... ResidentInfoList.o"
+	@echo "... ResidentInfoList.i"
+	@echo "... ResidentInfoList.s"
 	@echo "... Utils.o"
 	@echo "... Utils.i"
 	@echo "... Utils.s"
 	@echo "... VisitorInfo.o"
 	@echo "... VisitorInfo.i"
 	@echo "... VisitorInfo.s"
+	@echo "... VisitorInfoList.o"
+	@echo "... VisitorInfoList.i"
+	@echo "... VisitorInfoList.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

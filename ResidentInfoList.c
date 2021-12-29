@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "LinkList.h"
 #include <string.h>
+#include "ResidentInfo.h"
+#include "ResidentInfoList.h"
 
-LinkList *createList() {
-    LinkList *head = (LinkList *) malloc(sizeof(LinkList));
 
-    head->data = (VisitorInfo *) malloc(sizeof(VisitorInfo));
+ResidentInfoList *createList() {
+    ResidentInfoList *head = (ResidentInfoList *) malloc(sizeof(ResidentInfoList));
+
+    head->data = (ResidentInfo *) malloc(sizeof(ResidentInfo));
     head->data->HealthCode = 0;
     strcat(head->data->name, "个数");
     head->next = NULL;
@@ -15,16 +17,16 @@ LinkList *createList() {
     return head;
 }
 
-LinkList *createNode(VisitorInfo *val) {
-    LinkList *cur_node = (LinkList *) malloc(sizeof(LinkList));
+ResidentInfoList *createNode(ResidentInfo *val) {
+    ResidentInfoList *cur_node = (ResidentInfoList *) malloc(sizeof(ResidentInfoList));
     cur_node->data = val;
     cur_node->next = NULL;
 
     return cur_node;
 }
 
-void add(LinkList *head, VisitorInfo *val) {
-    LinkList *cur_node = createNode(val);
+void add(ResidentInfoList *head, ResidentInfo *val) {
+    ResidentInfoList *cur_node = createNode(val);
 
     cur_node->next = head->next;
     head->next = cur_node;
@@ -32,9 +34,9 @@ void add(LinkList *head, VisitorInfo *val) {
     head->data->HealthCode++;
 }
 
-void append(LinkList *head, VisitorInfo *val) {
-    LinkList *cur_node = createNode(val);
-    LinkList *p = head;
+void append(ResidentInfoList *head, ResidentInfo *val) {
+    ResidentInfoList *cur_node = createNode(val);
+    ResidentInfoList *p = head;
 
     while (p->next) {
         p = p->next;
@@ -44,12 +46,12 @@ void append(LinkList *head, VisitorInfo *val) {
     head->data->HealthCode++;
 }
 
-LinkList *fromNums(VisitorInfo val[], size_t len) {
-    LinkList *head = createList();
-    LinkList *p = head;
+ResidentInfoList *fromNums(ResidentInfo val[], size_t len) {
+    ResidentInfoList *head = createList();
+    ResidentInfoList *p = head;
 
     for (size_t i = 0; i < len; ++i) {
-        LinkList *cur_node = createNode(&val[i]);
+        ResidentInfoList *cur_node = createNode(&val[i]);
         p->next = cur_node;
         p = p->next;
         head->data++;
@@ -58,10 +60,10 @@ LinkList *fromNums(VisitorInfo val[], size_t len) {
     return head;
 }
 
-void removeByIndex(LinkList *head, size_t index) {
+void removeByIndex(ResidentInfoList *head, size_t index) {
     assert(index < head->data->HealthCode);
 
-    LinkList *p = head;
+    ResidentInfoList *p = head;
 
     size_t cnt = 0;
 
@@ -70,15 +72,15 @@ void removeByIndex(LinkList *head, size_t index) {
         cnt++;
     }
 
-    LinkList *deleteItem = p->next;
+    ResidentInfoList *deleteItem = p->next;
     p->next = deleteItem->next;
     free(deleteItem);
 }
 
-LinkList *getByIndex(LinkList *head, size_t index) {
+ResidentInfoList *getByIndex(ResidentInfoList *head, size_t index) {
     assert(index < head->data->HealthCode);
 
-    LinkList *p = head;
+    ResidentInfoList *p = head;
 
     size_t cnt = 0;
 
@@ -90,7 +92,7 @@ LinkList *getByIndex(LinkList *head, size_t index) {
     return p->next;
 }
 
-void toNums(VisitorInfo **nums, LinkList *head) {
+void toNums(ResidentInfo **nums, ResidentInfoList *head) {
     size_t len = head->data->HealthCode;
     head = head->next;
 
@@ -99,7 +101,7 @@ void toNums(VisitorInfo **nums, LinkList *head) {
     }
 }
 
-void printList(LinkList *head) {
+void printList(ResidentInfoList *head) {
     head = head->next;
     while (head) {
         printData(head->data);

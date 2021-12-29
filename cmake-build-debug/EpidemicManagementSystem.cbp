@@ -76,16 +76,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/LinkList.c">
-			<Option target="EpidemicManagementSystem"/>
-		</Unit>
-		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/LinkList.h">
-			<Option target="EpidemicManagementSystem"/>
-		</Unit>
 		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/ResidentInfo.c">
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
 		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/ResidentInfo.h">
+			<Option target="EpidemicManagementSystem"/>
+		</Unit>
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/ResidentInfoList.c">
+			<Option target="EpidemicManagementSystem"/>
+		</Unit>
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/ResidentInfoList.h">
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
 		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/Utils.c">
@@ -98,6 +98,12 @@
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
 		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/VisitorInfo.h">
+			<Option target="EpidemicManagementSystem"/>
+		</Unit>
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/VisitorInfoList.c">
+			<Option target="EpidemicManagementSystem"/>
+		</Unit>
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/VisitorInfoList.h">
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
 		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/main.c">

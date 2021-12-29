@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include "LinkList.h"
+#include "VisitorInfoList.h"
 #include "VisitorInfo.h"
 #include "ResidentInfo.h"
 
 
 int main() {
-    LinkList *list = createList();
+    ResidentInfoList *list = createList();
 
     for (int i = 0; i < 2; i++) {
         append(list, initVisitorInfo(createVisitorInfo()));

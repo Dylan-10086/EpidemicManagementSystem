@@ -8,10 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/zitao/Code/C:C++/EpidemicManagementSystem/LinkList.c" "/Users/zitao/Code/C:C++/EpidemicManagementSystem/cmake-build-debug/CMakeFiles/EpidemicManagementSystem.dir/LinkList.c.o"
   "/Users/zitao/Code/C:C++/EpidemicManagementSystem/ResidentInfo.c" "/Users/zitao/Code/C:C++/EpidemicManagementSystem/cmake-build-debug/CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.o"
+  "/Users/zitao/Code/C:C++/EpidemicManagementSystem/ResidentInfoList.c" "/Users/zitao/Code/C:C++/EpidemicManagementSystem/cmake-build-debug/CMakeFiles/EpidemicManagementSystem.dir/ResidentInfoList.c.o"
   "/Users/zitao/Code/C:C++/EpidemicManagementSystem/Utils.c" "/Users/zitao/Code/C:C++/EpidemicManagementSystem/cmake-build-debug/CMakeFiles/EpidemicManagementSystem.dir/Utils.c.o"
   "/Users/zitao/Code/C:C++/EpidemicManagementSystem/VisitorInfo.c" "/Users/zitao/Code/C:C++/EpidemicManagementSystem/cmake-build-debug/CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.o"
+  "/Users/zitao/Code/C:C++/EpidemicManagementSystem/VisitorInfoList.c" "/Users/zitao/Code/C:C++/EpidemicManagementSystem/cmake-build-debug/CMakeFiles/EpidemicManagementSystem.dir/VisitorInfoList.c.o"
   "/Users/zitao/Code/C:C++/EpidemicManagementSystem/main.c" "/Users/zitao/Code/C:C++/EpidemicManagementSystem/cmake-build-debug/CMakeFiles/EpidemicManagementSystem.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
