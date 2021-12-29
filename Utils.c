@@ -1,6 +1,3 @@
-//
-// Created by 小学二年级的刘同学 on 2021/12/28.
-//
 #include <string.h>
 #include "Utils.h"
 

@@ -1,7 +1,3 @@
-//
-// Created by 小学二年级的刘同学 on 2021/12/28.
-//
-
 #ifndef EPIDEMICMANAGEMENTSYSTEM_UTILS_H
 #define EPIDEMICMANAGEMENTSYSTEM_UTILS_H
 
