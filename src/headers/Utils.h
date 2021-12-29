@@ -1,6 +1,7 @@
 #ifndef EPIDEMICMANAGEMENTSYSTEM_UTILS_H
 #define EPIDEMICMANAGEMENTSYSTEM_UTILS_H
 
+#include <stdio.h>
 #include <stdbool.h>
 #include <time.h>
 #include "VisitorInfo.h"
@@ -21,7 +22,7 @@ bool isResidentAddressValid(int buildingNum, int houseNum);
 
 bool isHealthCodeValid(unsigned short int code);
 
-bool isIsolationStatusValid(bool isolationStatus);
+bool isIsolationStatusValid(int isolationStatus);
 
 
 #endif //EPIDEMICMANAGEMENTSYSTEM_UTILS_H

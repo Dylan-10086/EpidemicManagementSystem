@@ -5,17 +5,8 @@
 int main() {
     ResidentInfoList *list = createResidentInfoList();
 
-    for (int i = 0; i < 2; i++) {
-        appendResidentInfo(list, initResidentInfo(createResidentInfo()));
-    }
+    readResidentInfoListFromFile("../Data/residentData.txt", list);
 
-    ResidentInfo *nums[list->data->HealthCode];
-
-    ResidentInfoListToNums(nums, list);
-
-
-    for (int i = 0; i < 2; i++) {
-        printResidentData(nums[i]);
-    }
+    printResidentList(list);
     return 0;
 }

@@ -1,14 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "ResidentInfo.h"
-#include "Utils.h"
+#include "../headers/ResidentInfo.h"
+#include "../headers/Utils.h"
 
 ResidentInfo *createResidentInfo() {
     return (ResidentInfo *) malloc(sizeof(ResidentInfo));
 }
 
-ResidentInfo *initResidentInfo(ResidentInfo *info) {
+ResidentInfo *
+initResidentInfo(ResidentInfo *info, char *name, char *phone, int buildingNum, int houseNum, HealthCode healthCode,
+                 bool isolation) {
+    strcpy(info->name, name);
+    strcpy(info->phoneNum, phone);
+    info->buildingNum = buildingNum;
+    info->houseNum = houseNum;
+    info->healthCode = healthCode;
+    info->isolation = isolation;
+
+    return info;
+}
+
+ResidentInfo *getResidentInfo(ResidentInfo *info) {
     getResidentName(info);
     getResidentPhoneNum(info);
     getResidentAddress(info);
@@ -72,7 +85,7 @@ void getResidentHealthCode(ResidentInfo *info) {
         scanf("%hu", &temp);
     }
 
-    info->HealthCode = temp;
+    info->healthCode = temp;
 }
 
 void getResidentIsolationStatus(ResidentInfo *info) {
@@ -90,6 +103,17 @@ void getResidentIsolationStatus(ResidentInfo *info) {
     info->isolation = flag;
 }
 
+void saveResidentInfoToFile(FILE *file, ResidentInfo *info) {
+
+    if (file == NULL) {
+        printf("出错了!");
+        return;
+    }
+
+    fprintf(file, "%s %s %d %d %hu %d\n", info->name, info->phoneNum, info->buildingNum, info->houseNum,
+            info->healthCode, info->isolation);
+}
+
 void printResidentData(ResidentInfo *data) {
     char *code, *isolation;
     char red[] = "红码";
@@ -99,7 +123,7 @@ void printResidentData(ResidentInfo *data) {
     char no[] = "否";
 
 
-    switch (data->HealthCode) {
+    switch (data->healthCode) {
         case RED:
             code = red;
             break;

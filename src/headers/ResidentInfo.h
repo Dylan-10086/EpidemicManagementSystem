@@ -2,7 +2,10 @@
 #define EPIDEMICMANAGEMENTSYSTEM_RESIDENTINFO_H
 
 #include <stdbool.h>
+#include <stdio.h>
 
+
+typedef unsigned short int HealthCode;
 
 typedef struct {
     char name[20];
@@ -11,14 +14,17 @@ typedef struct {
     int buildingNum;
     int houseNum;
 
-    unsigned short int HealthCode;
-
+    HealthCode healthCode;
     bool isolation;
 } ResidentInfo;
 
 ResidentInfo *createResidentInfo();
 
-ResidentInfo *initResidentInfo(ResidentInfo *info);
+ResidentInfo *
+initResidentInfo(ResidentInfo *info, char *name, char *phone, int buildingNum, int houseNum, HealthCode healthCode,
+                 bool isolation);
+
+ResidentInfo *getResidentInfo(ResidentInfo *info);
 
 void getResidentName(ResidentInfo *info);
 
@@ -31,6 +37,8 @@ void getResidentHealthCode(ResidentInfo *info);
 void getResidentIsolationStatus(ResidentInfo *info);
 
 void printResidentData(ResidentInfo *data);
+
+void saveResidentInfoToFile(FILE *file, ResidentInfo *info);
 
 
 #endif //EPIDEMICMANAGEMENTSYSTEM_RESIDENTINFO_H

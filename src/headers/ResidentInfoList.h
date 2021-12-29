@@ -39,8 +39,12 @@ ResidentInfoList *createResidentInfoList();
 
 void removeResidentInfoByIndex(ResidentInfoList *head, size_t index);
 
-void ResidentInfoListToNums(ResidentInfo **nums, ResidentInfoList *head);
+void residentInfoListToNums(ResidentInfo **nums, ResidentInfoList *head);
 
 void printResidentList(ResidentInfoList *head);
+
+void saveResidentInfoListToFile(const char *fileName, ResidentInfoList *head);
+
+void readResidentInfoListFromFile(const char *fileName, ResidentInfoList *head);
 
 #endif //EPIDEMICMANAGEMENTSYSTEM_RESIDENTINFOLIST_H

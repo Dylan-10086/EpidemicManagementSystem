@@ -45,6 +45,6 @@ bool isNameValid(const char *name) {
     return strlen(name) != 0;
 }
 
-bool isIsolationStatusValid(bool isolationStatus) {
-    return isolationStatus == true || isolationStatus == false;
+bool isIsolationStatusValid(int isolationStatus) {
+    return isolationStatus == 1 || isolationStatus == 0;
 }
