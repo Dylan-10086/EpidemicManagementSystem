@@ -6,7 +6,7 @@
 #include "ResidentInfoList.h"
 
 
-ResidentInfoList *createList() {
+ResidentInfoList *createResidentInfoList() {
     ResidentInfoList *head = (ResidentInfoList *) malloc(sizeof(ResidentInfoList));
 
     head->data = (ResidentInfo *) malloc(sizeof(ResidentInfo));
@@ -17,7 +17,7 @@ ResidentInfoList *createList() {
     return head;
 }
 
-ResidentInfoList *createNode(ResidentInfo *val) {
+ResidentInfoList *createResidentInfoListNode(ResidentInfo *val) {
     ResidentInfoList *cur_node = (ResidentInfoList *) malloc(sizeof(ResidentInfoList));
     cur_node->data = val;
     cur_node->next = NULL;
@@ -25,8 +25,8 @@ ResidentInfoList *createNode(ResidentInfo *val) {
     return cur_node;
 }
 
-void add(ResidentInfoList *head, ResidentInfo *val) {
-    ResidentInfoList *cur_node = createNode(val);
+void addResidentInfo(ResidentInfoList *head, ResidentInfo *val) {
+    ResidentInfoList *cur_node = createResidentInfoListNode(val);
 
     cur_node->next = head->next;
     head->next = cur_node;
@@ -34,8 +34,8 @@ void add(ResidentInfoList *head, ResidentInfo *val) {
     head->data->HealthCode++;
 }
 
-void append(ResidentInfoList *head, ResidentInfo *val) {
-    ResidentInfoList *cur_node = createNode(val);
+void appendResidentInfo(ResidentInfoList *head, ResidentInfo *val) {
+    ResidentInfoList *cur_node = createResidentInfoListNode(val);
     ResidentInfoList *p = head;
 
     while (p->next) {
@@ -47,11 +47,11 @@ void append(ResidentInfoList *head, ResidentInfo *val) {
 }
 
 ResidentInfoList *fromNums(ResidentInfo val[], size_t len) {
-    ResidentInfoList *head = createList();
+    ResidentInfoList *head = createResidentInfoList();
     ResidentInfoList *p = head;
 
     for (size_t i = 0; i < len; ++i) {
-        ResidentInfoList *cur_node = createNode(&val[i]);
+        ResidentInfoList *cur_node = createResidentInfoListNode(&val[i]);
         p->next = cur_node;
         p = p->next;
         head->data++;
@@ -60,7 +60,7 @@ ResidentInfoList *fromNums(ResidentInfo val[], size_t len) {
     return head;
 }
 
-void removeByIndex(ResidentInfoList *head, size_t index) {
+void removeResidentInfoByIndex(ResidentInfoList *head, size_t index) {
     assert(index < head->data->HealthCode);
 
     ResidentInfoList *p = head;
@@ -77,7 +77,7 @@ void removeByIndex(ResidentInfoList *head, size_t index) {
     free(deleteItem);
 }
 
-ResidentInfoList *getByIndex(ResidentInfoList *head, size_t index) {
+ResidentInfoList *getResidentInfoByIndex(ResidentInfoList *head, size_t index) {
     assert(index < head->data->HealthCode);
 
     ResidentInfoList *p = head;
@@ -92,7 +92,7 @@ ResidentInfoList *getByIndex(ResidentInfoList *head, size_t index) {
     return p->next;
 }
 
-void toNums(ResidentInfo **nums, ResidentInfoList *head) {
+void ResidentInfoListToNums(ResidentInfo **nums, ResidentInfoList *head) {
     size_t len = head->data->HealthCode;
     head = head->next;
 
@@ -101,10 +101,10 @@ void toNums(ResidentInfo **nums, ResidentInfoList *head) {
     }
 }
 
-void printList(ResidentInfoList *head) {
+void printResidentList(ResidentInfoList *head) {
     head = head->next;
     while (head) {
-        printData(head->data);
+        printResidentData(head->data);
         head = head->next;
     }
     printf("\n");

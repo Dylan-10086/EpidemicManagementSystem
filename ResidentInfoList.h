@@ -16,9 +16,9 @@ typedef struct List {
  * @param val
  * @return
  */
-void append(ResidentInfoList *head, ResidentInfo *val);
+void appendResidentInfo(ResidentInfoList *head, ResidentInfo *val);
 
-void add(ResidentInfoList *head, ResidentInfo *val);
+void addResidentInfo(ResidentInfoList *head, ResidentInfo *val);
 
 /**
  * 按索引获取元素，索引的行为和数组相同
@@ -26,21 +26,21 @@ void add(ResidentInfoList *head, ResidentInfo *val);
  * @param index
  * @return
  */
-ResidentInfoList *getByIndex(ResidentInfoList *head, size_t index);
+ResidentInfoList *getResidentInfoByIndex(ResidentInfoList *head, size_t index);
 
 /**
  * 创建一个节点
  * @param val
  * @return
  */
-ResidentInfoList *createNode(ResidentInfo *val);
+ResidentInfoList *createResidentInfoListNode(ResidentInfo *val);
 
-ResidentInfoList *createList();
+ResidentInfoList *createResidentInfoList();
 
-void removeByIndex(ResidentInfoList *head, size_t index);
+void removeResidentInfoByIndex(ResidentInfoList *head, size_t index);
 
-void toNums(ResidentInfo **nums, ResidentInfoList *head);
+void ResidentInfoListToNums(ResidentInfo **nums, ResidentInfoList *head);
 
-void printList(ResidentInfoList *head);
+void printResidentList(ResidentInfoList *head);
 
 #endif //EPIDEMICMANAGEMENTSYSTEM_RESIDENTINFOLIST_H

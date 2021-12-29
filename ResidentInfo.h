@@ -30,7 +30,7 @@ void getResidentHealthCode(ResidentInfo *info);
 
 void getResidentIsolationStatus(ResidentInfo *info);
 
-void printData(ResidentInfo *data);
+void printResidentData(ResidentInfo *data);
 
 
 #endif //EPIDEMICMANAGEMENTSYSTEM_RESIDENTINFO_H

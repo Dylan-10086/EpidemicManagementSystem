@@ -13,6 +13,10 @@ bool isVisitorAddressValid(const char *address) {
     return strlen(address) >= 0;
 }
 
+bool isResidentAddressValid(int buildingNum, int houseNum) {
+    return buildingNum > 0 && houseNum > 0;
+}
+
 bool isTimeValid(Time *time) {
     if (time->tm_mon <= 0 || time->tm_mon > 12) {
         return false;
@@ -39,4 +43,8 @@ bool isPhoneNumValid(const char *phoneNum) {
 
 bool isNameValid(const char *name) {
     return strlen(name) != 0;
+}
+
+bool isIsolationStatusValid(bool isolationStatus) {
+    return isolationStatus == true || isolationStatus == false;
 }

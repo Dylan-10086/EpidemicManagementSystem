@@ -21,5 +21,7 @@ bool isResidentAddressValid(int buildingNum, int houseNum);
 
 bool isHealthCodeValid(unsigned short int code);
 
+bool isIsolationStatusValid(bool isolationStatus);
+
 
 #endif //EPIDEMICMANAGEMENTSYSTEM_UTILS_H

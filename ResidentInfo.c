@@ -14,6 +14,8 @@ ResidentInfo *initResidentInfo(ResidentInfo *info) {
     getResidentAddress(info);
     getResidentHealthCode(info);
     getResidentIsolationStatus(info);
+
+    return info;
 }
 
 void getResidentName(ResidentInfo *info) {
@@ -74,20 +76,21 @@ void getResidentHealthCode(ResidentInfo *info) {
 }
 
 void getResidentIsolationStatus(ResidentInfo *info) {
-    printf("\n请输入人员姓名:\n");
+    printf("\n是否隔离(0: 否; 1: 是):\n");
 
-    char temp[50];
-    scanf("%s", temp);
+    int flag;
+    scanf("%d", &flag);
 
-    while (!isNameValid(temp)) {
+    while (!isIsolationStatusValid(flag)) {
         printf("输入错误,请重新输入!\n");
-        scanf("%s", temp);
+        scanf("%d", &flag);
+
     }
 
-    strcpy(info->name, temp);
+    info->isolation = flag;
 }
 
-void printData(ResidentInfo *data) {
+void printResidentData(ResidentInfo *data) {
     char *code, *isolation;
     char red[] = "红码";
     char yellow[] = "黄码";
@@ -114,5 +117,5 @@ void printData(ResidentInfo *data) {
         isolation = no;
     }
 
-    printf("%s %s %d-%d %s %s", data->name, data->phoneNum, data->buildingNum, data->houseNum, code, isolation);
+    printf("%s %s %d-%d %s %s\n", data->name, data->phoneNum, data->buildingNum, data->houseNum, code, isolation);
 }

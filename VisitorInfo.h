@@ -43,11 +43,9 @@ void getVisitorHealthCode(VisitorInfo *data);
 
 void getVisitorRemarks(VisitorInfo *data);
 
-void getDataFromFile(VisitorInfo *data, const char *filePath);
-
 VisitorInfo *createVisitorInfo();
 
-void printData(VisitorInfo *data);
+void printVisitorData(VisitorInfo *data);
 
 VisitorInfo *initVisitorInfo(VisitorInfo *data);
 

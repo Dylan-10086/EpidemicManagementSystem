@@ -135,7 +135,7 @@ void getVisitorRemarks(VisitorInfo *data) {
     strcpy(data->remarks, str);
 }
 
-void printData(VisitorInfo *data) {
+void printVisitorData(VisitorInfo *data) {
     char *code;
     char red[] = "红码";
     char yellow[] = "黄码";

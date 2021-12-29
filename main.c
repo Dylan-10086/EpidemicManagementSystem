@@ -1,23 +1,21 @@
-#include <stdio.h>
-#include "VisitorInfoList.h"
-#include "VisitorInfo.h"
 #include "ResidentInfo.h"
+#include "ResidentInfoList.h"
 
 
 int main() {
-    ResidentInfoList *list = createList();
+    ResidentInfoList *list = createResidentInfoList();
 
     for (int i = 0; i < 2; i++) {
-        append(list, initVisitorInfo(createVisitorInfo()));
+        appendResidentInfo(list, initResidentInfo(createResidentInfo()));
     }
 
-    VisitorInfo *nums[list->data->HealthCode];
+    ResidentInfo *nums[list->data->HealthCode];
 
-    toNums(nums, list);
+    ResidentInfoListToNums(nums, list);
 
 
     for (int i = 0; i < 2; i++) {
-        printData(nums[i]);
+        printResidentData(nums[i]);
     }
     return 0;
 }

@@ -8,7 +8,7 @@
 typedef struct List {
     VisitorInfo *data;
     struct List *next;
-} ResidentInfoList;
+} VisitorInfoList;
 
 
 /**
@@ -17,9 +17,9 @@ typedef struct List {
  * @param val
  * @return
  */
-void append(ResidentInfoList *head, VisitorInfo *val);
+void appendVisitorInfo(VisitorInfoList *head, VisitorInfo *val);
 
-void add(ResidentInfoList *head, VisitorInfo *val);
+void addVisitorInfo(VisitorInfoList *head, VisitorInfo *val);
 
 /**
  * 按索引获取元素，索引的行为和数组相同
@@ -27,22 +27,22 @@ void add(ResidentInfoList *head, VisitorInfo *val);
  * @param index
  * @return
  */
-ResidentInfoList *getByIndex(ResidentInfoList *head, size_t index);
+VisitorInfoList *getVisitorInfoByIndex(VisitorInfoList *head, size_t index);
 
 /**
  * 创建一个节点
  * @param val
  * @return
  */
-ResidentInfoList *createNode(VisitorInfo *val);
+VisitorInfoList *createVisitorInfoListNode(VisitorInfo *val);
 
-ResidentInfoList * createList();
+VisitorInfoList *createVisitorInfoList();
 
-void removeByIndex(ResidentInfoList *head, size_t index);
+void removeVisitorInfoByIndex(VisitorInfoList *head, size_t index);
 
-void toNums(VisitorInfo **nums, ResidentInfoList *head);
+void visitorInfoListToNums(VisitorInfo **nums, VisitorInfoList *head);
 
-void printList(ResidentInfoList *head);
+void printVisitorInfoList(VisitorInfoList *head);
 
 #define LINKLIST_LINKLIST_H
 
