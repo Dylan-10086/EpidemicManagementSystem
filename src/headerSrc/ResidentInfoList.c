@@ -9,6 +9,7 @@
 ResidentInfoList *createResidentInfoList() {
     ResidentInfoList *head = (ResidentInfoList *) malloc(sizeof(ResidentInfoList));
 
+    // 头节点中data域中healthCode会储存链表长度
     head->data = (ResidentInfo *) malloc(sizeof(ResidentInfo));
     head->data->healthCode = 0;
     strcat(head->data->name, "个数");

@@ -4,9 +4,9 @@
 #include <stdlib.h>
 #include "ResidentInfo.h"
 
-typedef struct List {
+typedef struct rList {
     ResidentInfo *data;
-    struct List *next;
+    struct rList *next;
 } ResidentInfoList;
 
 

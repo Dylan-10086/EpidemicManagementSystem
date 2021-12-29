@@ -7,7 +7,7 @@
 
 typedef unsigned short int HealthCode;
 
-typedef struct {
+typedef struct rInfo {
     char name[20];
     char phoneNum[20];
 

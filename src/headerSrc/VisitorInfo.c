@@ -8,7 +8,21 @@ VisitorInfo *createVisitorInfo() {
     return (VisitorInfo *) malloc(sizeof(VisitorInfo));
 }
 
-VisitorInfo *initVisitorInfo(VisitorInfo *data) {
+VisitorInfo *
+initVisitorInfo(VisitorInfo *data, char *name, char *phone, long arrive, long leave, char *from, HealthCode healthCode,
+                char *remarks) {
+    strcpy(data->name, name);
+    strcpy(data->phone, phone);
+    data->arriveTime = arrive;
+    data->leaveTime = leave;
+    strcpy(data->fromWhere, from);
+    data->healthCode = healthCode;
+    strcpy(data->remarks, remarks);
+
+    return data;
+}
+
+VisitorInfo *getVisitorInfo(VisitorInfo *data) {
     getVisitorName(data);
     getVisitorPhoneNum(data);
     getVisitorArriveTime(data);
@@ -45,7 +59,7 @@ void getVisitorPhoneNum(VisitorInfo *data) {
         scanf("%s", temp);
     }
 
-    strcpy(data->phoneNum, temp);
+    strcpy(data->phone, temp);
 }
 
 void getVisitorArriveTime(VisitorInfo *data) {
@@ -66,7 +80,7 @@ void getVisitorArriveTime(VisitorInfo *data) {
         printf("输入错误,请重新输入!\n");
         scanf("%d %d %d %d %d", &year, &month, &day, &hour, &min);
     }
-    data->arriveTime = time;
+    data->arriveTime = mktime(time);
 }
 
 void getVisitorLeaveTime(VisitorInfo *data) {
@@ -90,7 +104,7 @@ void getVisitorLeaveTime(VisitorInfo *data) {
         printf("输入错误,请重新输入!\n");
         scanf("%d %d %d %d %d", &year, &month, &day, &hour, &min);
     }
-    data->leaveTime = time;
+    data->leaveTime = mktime(time);
 }
 
 void getVisitorFromWhere(VisitorInfo *data) {
@@ -118,7 +132,7 @@ void getVisitorHealthCode(VisitorInfo *data) {
         scanf("%hu", &temp);
     }
 
-    data->HealthCode = temp;
+    data->healthCode = temp;
 }
 
 void getVisitorRemarks(VisitorInfo *data) {
@@ -128,9 +142,7 @@ void getVisitorRemarks(VisitorInfo *data) {
     char str[256];
 
     getchar();
-    while ((temp = (char) getchar()) != '\n') {
-        strcat(str, &temp);
-    }
+    scanf("%[^\n]", str);
 
     strcpy(data->remarks, str);
 }
@@ -142,7 +154,7 @@ void printVisitorData(VisitorInfo *data) {
     char green[] = "绿码";
 
 
-    switch (data->HealthCode) {
+    switch (data->healthCode) {
         case RED:
             code = red;
             break;
@@ -154,7 +166,16 @@ void printVisitorData(VisitorInfo *data) {
             break;
     }
 
-    printf("%s %s %d %d %s %s\n", data->name, data->phoneNum, data->arriveTime->tm_hour, data->leaveTime->tm_hour,
+    printf("%s %s %ld %ld %s %s\n", data->name, data->phone, data->arriveTime, data->leaveTime,
            data->fromWhere, code);
 }
 
+void saveVisitorInfoToFile(FILE *file, VisitorInfo *data) {
+    if (file == NULL) {
+        printf("出错了!");
+        return;
+    }
+
+    fprintf(file, "%s %s %ld %ld %s %hu %s\n", data->name, data->phone, data->arriveTime, data->leaveTime,
+            data->fromWhere, data->healthCode, data->remarks);
+}

@@ -25,4 +25,6 @@ CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/VisitorInfoList.c.o: \
 CMakeFiles/EpidemicManagementSystem.dir/src/main.c.o: \
  ../src/headers/ResidentInfo.h \
  ../src/headers/ResidentInfoList.h \
+ ../src/headers/VisitorInfo.h \
+ ../src/headers/VisitorInfoList.h \
  ../src/main.c

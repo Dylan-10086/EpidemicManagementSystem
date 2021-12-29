@@ -1,6 +1,7 @@
 #ifndef EPIDEMICMANAGEMENTSYSTEM_VISITORINFO_H
 #define EPIDEMICMANAGEMENTSYSTEM_VISITORINFO_H
 
+#include <stdio.h>
 #include <stdbool.h>
 #include <time.h>
 
@@ -9,19 +10,29 @@
 #define GREEN 2
 
 typedef struct tm Time;
+typedef unsigned short int HealthCode;
 
-typedef struct {
+typedef struct vInfo {
     char name[20];
-    char phoneNum[20];
+    char phone[20];
 
-    Time *arriveTime;
-    Time *leaveTime;
+    // 时间储存的是从1970年开始到输入时间到ms数
+    time_t arriveTime;
+    time_t leaveTime;
 
     char fromWhere[50];
-    unsigned short int HealthCode;
+    HealthCode healthCode;
 
     char remarks[256];
 } VisitorInfo;
+
+VisitorInfo *createVisitorInfo();
+
+VisitorInfo *
+initVisitorInfo(VisitorInfo *data, char *name, char *phone, long arrive, long leave, char *from, HealthCode healthCode,
+                char *remarks);
+
+VisitorInfo *getVisitorInfo(VisitorInfo *data);
 
 
 void getVisitorName(VisitorInfo *data);
@@ -43,10 +54,10 @@ void getVisitorHealthCode(VisitorInfo *data);
 
 void getVisitorRemarks(VisitorInfo *data);
 
-VisitorInfo *createVisitorInfo();
 
 void printVisitorData(VisitorInfo *data);
 
-VisitorInfo *initVisitorInfo(VisitorInfo *data);
+void saveVisitorInfoToFile(FILE *file, VisitorInfo *data);
+
 
 #endif //EPIDEMICMANAGEMENTSYSTEM_VISITORINFO_H

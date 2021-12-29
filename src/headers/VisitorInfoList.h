@@ -5,9 +5,9 @@
 #include <stdbool.h>
 
 
-typedef struct List {
+typedef struct vList {
     VisitorInfo *data;
-    struct List *next;
+    struct vList *next;
 } VisitorInfoList;
 
 
@@ -43,6 +43,10 @@ void removeVisitorInfoByIndex(VisitorInfoList *head, size_t index);
 void visitorInfoListToNums(VisitorInfo **nums, VisitorInfoList *head);
 
 void printVisitorInfoList(VisitorInfoList *head);
+
+void saveVisitorInfoListToFile(const char *fileName, VisitorInfoList *head);
+
+void readVisitorInfoListFromFile(const char *fileName, VisitorInfoList *head);
 
 #define LINKLIST_LINKLIST_H
 

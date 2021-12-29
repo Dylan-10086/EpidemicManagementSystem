@@ -1,12 +1,15 @@
 #include "headers/ResidentInfo.h"
 #include "headers/ResidentInfoList.h"
+#include "headers/VisitorInfo.h"
+#include "headers/VisitorInfoList.h"
 
 
 int main() {
-    ResidentInfoList *list = createResidentInfoList();
+    VisitorInfoList *list = createVisitorInfoList();
 
-    readResidentInfoListFromFile("../Data/residentData.txt", list);
+    readVisitorInfoListFromFile("../Data/visitorData.txt", list);
 
-    printResidentList(list);
+    saveVisitorInfoListToFile("../Data/visitorData.txt", list);
+    printVisitorInfoList(list);
     return 0;
 }

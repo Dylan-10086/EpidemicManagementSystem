@@ -7,8 +7,9 @@
 VisitorInfoList *createVisitorInfoList() {
     VisitorInfoList *head = (VisitorInfoList *) malloc(sizeof(VisitorInfoList));
 
+    // 头节点中data域中healthCode会储存链表长度
     head->data = (VisitorInfo *) malloc(sizeof(VisitorInfo));
-    head->data->HealthCode = 0;
+    head->data->healthCode = 0;
     strcat(head->data->name, "个数");
     head->next = NULL;
 
@@ -29,7 +30,7 @@ void addVisitorInfo(VisitorInfoList *head, VisitorInfo *val) {
     cur_node->next = head->next;
     head->next = cur_node;
 
-    head->data->HealthCode++;
+    head->data->healthCode++;
 }
 
 void appendVisitorInfo(VisitorInfoList *head, VisitorInfo *val) {
@@ -41,7 +42,7 @@ void appendVisitorInfo(VisitorInfoList *head, VisitorInfo *val) {
     }
     p->next = cur_node;
 
-    head->data->HealthCode++;
+    head->data->healthCode++;
 }
 
 VisitorInfoList *createVisitorInfoListFromNums(VisitorInfo val[], size_t len) {
@@ -59,7 +60,7 @@ VisitorInfoList *createVisitorInfoListFromNums(VisitorInfo val[], size_t len) {
 }
 
 void removeVisitorInfoByIndex(VisitorInfoList *head, size_t index) {
-    assert(index < head->data->HealthCode);
+    assert(index < head->data->healthCode);
 
     VisitorInfoList *p = head;
 
@@ -76,7 +77,7 @@ void removeVisitorInfoByIndex(VisitorInfoList *head, size_t index) {
 }
 
 VisitorInfoList *getVisitorInfoByIndex(VisitorInfoList *head, size_t index) {
-    assert(index < head->data->HealthCode);
+    assert(index < head->data->healthCode);
 
     VisitorInfoList *p = head;
 
@@ -91,7 +92,7 @@ VisitorInfoList *getVisitorInfoByIndex(VisitorInfoList *head, size_t index) {
 }
 
 void visitorInfoListToNums(VisitorInfo **nums, VisitorInfoList *head) {
-    size_t len = head->data->HealthCode;
+    size_t len = head->data->healthCode;
     head = head->next;
 
     for (int i = 0; i < len; i++, head = head->next) {
@@ -108,4 +109,37 @@ void printVisitorInfoList(VisitorInfoList *head) {
     printf("\n");
 }
 
+void saveVisitorInfoListToFile(const char *fileName, VisitorInfoList *head) {
+    FILE *file = fopen(fileName, "a+");
+
+    if (file == NULL) {
+        printf("出错了!");
+        return;
+    }
+
+    head = head->next;
+
+    while (head) {
+        saveVisitorInfoToFile(file, head->data);
+        head = head->next;
+    }
+}
+
+void readVisitorInfoListFromFile(const char *fileName, VisitorInfoList *head) {
+    FILE *file = fopen(fileName, "r");
+
+    if (file == NULL) {
+        printf("出错了!");
+        return;
+    }
+
+    char name[20], phone[20], from[50], remarks[256];
+    time_t arrive, leave;
+    HealthCode healthCode;
+
+    while (fscanf(file, "%s %s %ld %ld %s %hu %s", name, phone, &arrive, &leave, from, &healthCode, remarks) != EOF) {
+        appendVisitorInfo(head,
+                          initVisitorInfo(createVisitorInfo(), name, phone, arrive, leave, from, healthCode, remarks));
+    }
+}
 
