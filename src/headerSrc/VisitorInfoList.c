@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "VisitorInfoList.h"
+#include "../headers/VisitorInfoList.h"
 #include <string.h>
 
 VisitorInfoList *createVisitorInfoList() {

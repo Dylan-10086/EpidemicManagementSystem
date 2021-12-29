@@ -129,149 +129,149 @@ EpidemicManagementSystem/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/build
 .PHONY : EpidemicManagementSystem/fast
 
-ResidentInfo.o: ResidentInfo.c.o
-.PHONY : ResidentInfo.o
+src/headerSrc/ResidentInfo.o: src/headerSrc/ResidentInfo.c.o
+.PHONY : src/headerSrc/ResidentInfo.o
 
 # target to build an object file
-ResidentInfo.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.o
-.PHONY : ResidentInfo.c.o
+src/headerSrc/ResidentInfo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/ResidentInfo.c.o
+.PHONY : src/headerSrc/ResidentInfo.c.o
 
-ResidentInfo.i: ResidentInfo.c.i
-.PHONY : ResidentInfo.i
+src/headerSrc/ResidentInfo.i: src/headerSrc/ResidentInfo.c.i
+.PHONY : src/headerSrc/ResidentInfo.i
 
 # target to preprocess a source file
-ResidentInfo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.i
-.PHONY : ResidentInfo.c.i
+src/headerSrc/ResidentInfo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/ResidentInfo.c.i
+.PHONY : src/headerSrc/ResidentInfo.c.i
 
-ResidentInfo.s: ResidentInfo.c.s
-.PHONY : ResidentInfo.s
+src/headerSrc/ResidentInfo.s: src/headerSrc/ResidentInfo.c.s
+.PHONY : src/headerSrc/ResidentInfo.s
 
 # target to generate assembly for a file
-ResidentInfo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.s
-.PHONY : ResidentInfo.c.s
+src/headerSrc/ResidentInfo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/ResidentInfo.c.s
+.PHONY : src/headerSrc/ResidentInfo.c.s
 
-ResidentInfoList.o: ResidentInfoList.c.o
-.PHONY : ResidentInfoList.o
+src/headerSrc/ResidentInfoList.o: src/headerSrc/ResidentInfoList.c.o
+.PHONY : src/headerSrc/ResidentInfoList.o
 
 # target to build an object file
-ResidentInfoList.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/ResidentInfoList.c.o
-.PHONY : ResidentInfoList.c.o
+src/headerSrc/ResidentInfoList.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/ResidentInfoList.c.o
+.PHONY : src/headerSrc/ResidentInfoList.c.o
 
-ResidentInfoList.i: ResidentInfoList.c.i
-.PHONY : ResidentInfoList.i
+src/headerSrc/ResidentInfoList.i: src/headerSrc/ResidentInfoList.c.i
+.PHONY : src/headerSrc/ResidentInfoList.i
 
 # target to preprocess a source file
-ResidentInfoList.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/ResidentInfoList.c.i
-.PHONY : ResidentInfoList.c.i
+src/headerSrc/ResidentInfoList.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/ResidentInfoList.c.i
+.PHONY : src/headerSrc/ResidentInfoList.c.i
 
-ResidentInfoList.s: ResidentInfoList.c.s
-.PHONY : ResidentInfoList.s
+src/headerSrc/ResidentInfoList.s: src/headerSrc/ResidentInfoList.c.s
+.PHONY : src/headerSrc/ResidentInfoList.s
 
 # target to generate assembly for a file
-ResidentInfoList.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/ResidentInfoList.c.s
-.PHONY : ResidentInfoList.c.s
+src/headerSrc/ResidentInfoList.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/ResidentInfoList.c.s
+.PHONY : src/headerSrc/ResidentInfoList.c.s
 
-Utils.o: Utils.c.o
-.PHONY : Utils.o
+src/headerSrc/Utils.o: src/headerSrc/Utils.c.o
+.PHONY : src/headerSrc/Utils.o
 
 # target to build an object file
-Utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/Utils.c.o
-.PHONY : Utils.c.o
+src/headerSrc/Utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/Utils.c.o
+.PHONY : src/headerSrc/Utils.c.o
 
-Utils.i: Utils.c.i
-.PHONY : Utils.i
+src/headerSrc/Utils.i: src/headerSrc/Utils.c.i
+.PHONY : src/headerSrc/Utils.i
 
 # target to preprocess a source file
-Utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/Utils.c.i
-.PHONY : Utils.c.i
+src/headerSrc/Utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/Utils.c.i
+.PHONY : src/headerSrc/Utils.c.i
 
-Utils.s: Utils.c.s
-.PHONY : Utils.s
+src/headerSrc/Utils.s: src/headerSrc/Utils.c.s
+.PHONY : src/headerSrc/Utils.s
 
 # target to generate assembly for a file
-Utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/Utils.c.s
-.PHONY : Utils.c.s
+src/headerSrc/Utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/Utils.c.s
+.PHONY : src/headerSrc/Utils.c.s
 
-VisitorInfo.o: VisitorInfo.c.o
-.PHONY : VisitorInfo.o
+src/headerSrc/VisitorInfo.o: src/headerSrc/VisitorInfo.c.o
+.PHONY : src/headerSrc/VisitorInfo.o
 
 # target to build an object file
-VisitorInfo.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.o
-.PHONY : VisitorInfo.c.o
+src/headerSrc/VisitorInfo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/VisitorInfo.c.o
+.PHONY : src/headerSrc/VisitorInfo.c.o
 
-VisitorInfo.i: VisitorInfo.c.i
-.PHONY : VisitorInfo.i
+src/headerSrc/VisitorInfo.i: src/headerSrc/VisitorInfo.c.i
+.PHONY : src/headerSrc/VisitorInfo.i
 
 # target to preprocess a source file
-VisitorInfo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.i
-.PHONY : VisitorInfo.c.i
+src/headerSrc/VisitorInfo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/VisitorInfo.c.i
+.PHONY : src/headerSrc/VisitorInfo.c.i
 
-VisitorInfo.s: VisitorInfo.c.s
-.PHONY : VisitorInfo.s
+src/headerSrc/VisitorInfo.s: src/headerSrc/VisitorInfo.c.s
+.PHONY : src/headerSrc/VisitorInfo.s
 
 # target to generate assembly for a file
-VisitorInfo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.s
-.PHONY : VisitorInfo.c.s
+src/headerSrc/VisitorInfo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/VisitorInfo.c.s
+.PHONY : src/headerSrc/VisitorInfo.c.s
 
-VisitorInfoList.o: VisitorInfoList.c.o
-.PHONY : VisitorInfoList.o
+src/headerSrc/VisitorInfoList.o: src/headerSrc/VisitorInfoList.c.o
+.PHONY : src/headerSrc/VisitorInfoList.o
 
 # target to build an object file
-VisitorInfoList.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/VisitorInfoList.c.o
-.PHONY : VisitorInfoList.c.o
+src/headerSrc/VisitorInfoList.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/VisitorInfoList.c.o
+.PHONY : src/headerSrc/VisitorInfoList.c.o
 
-VisitorInfoList.i: VisitorInfoList.c.i
-.PHONY : VisitorInfoList.i
+src/headerSrc/VisitorInfoList.i: src/headerSrc/VisitorInfoList.c.i
+.PHONY : src/headerSrc/VisitorInfoList.i
 
 # target to preprocess a source file
-VisitorInfoList.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/VisitorInfoList.c.i
-.PHONY : VisitorInfoList.c.i
+src/headerSrc/VisitorInfoList.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/VisitorInfoList.c.i
+.PHONY : src/headerSrc/VisitorInfoList.c.i
 
-VisitorInfoList.s: VisitorInfoList.c.s
-.PHONY : VisitorInfoList.s
+src/headerSrc/VisitorInfoList.s: src/headerSrc/VisitorInfoList.c.s
+.PHONY : src/headerSrc/VisitorInfoList.s
 
 # target to generate assembly for a file
-VisitorInfoList.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/VisitorInfoList.c.s
-.PHONY : VisitorInfoList.c.s
+src/headerSrc/VisitorInfoList.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/VisitorInfoList.c.s
+.PHONY : src/headerSrc/VisitorInfoList.c.s
 
-main.o: main.c.o
-.PHONY : main.o
+src/main.o: src/main.c.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/main.c.o
-.PHONY : main.c.o
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-main.i: main.c.i
-.PHONY : main.i
+src/main.i: src/main.c.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/main.c.i
-.PHONY : main.c.i
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+src/main.s: src/main.c.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/main.c.s
-.PHONY : main.c.s
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EpidemicManagementSystem.dir/build.make CMakeFiles/EpidemicManagementSystem.dir/src/main.c.s
+.PHONY : src/main.c.s
 
 # Help Target
 help:
@@ -282,24 +282,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... EpidemicManagementSystem"
-	@echo "... ResidentInfo.o"
-	@echo "... ResidentInfo.i"
-	@echo "... ResidentInfo.s"
-	@echo "... ResidentInfoList.o"
-	@echo "... ResidentInfoList.i"
-	@echo "... ResidentInfoList.s"
-	@echo "... Utils.o"
-	@echo "... Utils.i"
-	@echo "... Utils.s"
-	@echo "... VisitorInfo.o"
-	@echo "... VisitorInfo.i"
-	@echo "... VisitorInfo.s"
-	@echo "... VisitorInfoList.o"
-	@echo "... VisitorInfoList.i"
-	@echo "... VisitorInfoList.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/headerSrc/ResidentInfo.o"
+	@echo "... src/headerSrc/ResidentInfo.i"
+	@echo "... src/headerSrc/ResidentInfo.s"
+	@echo "... src/headerSrc/ResidentInfoList.o"
+	@echo "... src/headerSrc/ResidentInfoList.i"
+	@echo "... src/headerSrc/ResidentInfoList.s"
+	@echo "... src/headerSrc/Utils.o"
+	@echo "... src/headerSrc/Utils.i"
+	@echo "... src/headerSrc/Utils.s"
+	@echo "... src/headerSrc/VisitorInfo.o"
+	@echo "... src/headerSrc/VisitorInfo.i"
+	@echo "... src/headerSrc/VisitorInfo.s"
+	@echo "... src/headerSrc/VisitorInfoList.o"
+	@echo "... src/headerSrc/VisitorInfoList.i"
+	@echo "... src/headerSrc/VisitorInfoList.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

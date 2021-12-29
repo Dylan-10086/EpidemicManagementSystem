@@ -76,37 +76,37 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/ResidentInfo.c">
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/src/headerSrc/ResidentInfo.c">
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
-		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/ResidentInfo.h">
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/src/headerSrc/ResidentInfoList.c">
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
-		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/ResidentInfoList.c">
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/src/headerSrc/Utils.c">
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
-		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/ResidentInfoList.h">
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/src/headerSrc/VisitorInfo.c">
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
-		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/Utils.c">
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/src/headerSrc/VisitorInfoList.c">
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
-		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/Utils.h">
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/src/headers/ResidentInfo.h">
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
-		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/VisitorInfo.c">
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/src/headers/ResidentInfoList.h">
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
-		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/VisitorInfo.h">
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/src/headers/Utils.h">
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
-		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/VisitorInfoList.c">
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/src/headers/VisitorInfo.h">
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
-		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/VisitorInfoList.h">
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/src/headers/VisitorInfoList.h">
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
-		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/main.c">
+		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/src/main.c">
 			<Option target="EpidemicManagementSystem"/>
 		</Unit>
 		<Unit filename="/Users/zitao/Code/C:C++/EpidemicManagementSystem/CMakeLists.txt">

@@ -1,8 +1,8 @@
-#include "VisitorInfo.h"
+#include "../headers/VisitorInfo.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "Utils.h"
+#include "../headers/Utils.h"
 
 VisitorInfo *createVisitorInfo() {
     return (VisitorInfo *) malloc(sizeof(VisitorInfo));

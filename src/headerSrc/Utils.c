@@ -1,5 +1,5 @@
 #include <string.h>
-#include "Utils.h"
+#include "../headers/Utils.h"
 
 bool isHealthCodeValid(unsigned short int code) {
     if (0 <= code && code <= 2) {

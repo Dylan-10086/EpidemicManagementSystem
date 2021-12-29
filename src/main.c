@@ -1,5 +1,5 @@
-#include "ResidentInfo.h"
-#include "ResidentInfoList.h"
+#include "headers/ResidentInfo.h"
+#include "headers/ResidentInfoList.h"
 
 
 int main() {

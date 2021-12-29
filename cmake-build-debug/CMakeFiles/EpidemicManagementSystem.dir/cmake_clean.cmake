@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/EpidemicManagementSystem.dir/ResidentInfo.c.o"
-  "CMakeFiles/EpidemicManagementSystem.dir/ResidentInfoList.c.o"
-  "CMakeFiles/EpidemicManagementSystem.dir/Utils.c.o"
-  "CMakeFiles/EpidemicManagementSystem.dir/VisitorInfo.c.o"
-  "CMakeFiles/EpidemicManagementSystem.dir/VisitorInfoList.c.o"
-  "CMakeFiles/EpidemicManagementSystem.dir/main.c.o"
+  "CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/ResidentInfo.c.o"
+  "CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/ResidentInfoList.c.o"
+  "CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/Utils.c.o"
+  "CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/VisitorInfo.c.o"
+  "CMakeFiles/EpidemicManagementSystem.dir/src/headerSrc/VisitorInfoList.c.o"
+  "CMakeFiles/EpidemicManagementSystem.dir/src/main.c.o"
   "EpidemicManagementSystem"
   "EpidemicManagementSystem.pdb"
 )

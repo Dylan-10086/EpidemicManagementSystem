@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <string.h>
-#include "ResidentInfo.h"
-#include "ResidentInfoList.h"
+#include "../headers/ResidentInfo.h"
+#include "../headers/ResidentInfoList.h"
 
 
 ResidentInfoList *createResidentInfoList() {
