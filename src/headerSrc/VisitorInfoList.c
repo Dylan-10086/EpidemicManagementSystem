@@ -163,6 +163,10 @@ int compareByVisitorHealthCode(const void *item1, const void *item2) {
     return ((VisitorInfo *) item1)->healthCode - ((VisitorInfo *) item2)->healthCode;
 }
 
-void visitorListSortByName(VisitorInfo **resNums, VisitorInfoList *head) {
-    sort(resNums, head->data->healthCode, compareByVisitorName);
+void visitorListSortByName(VisitorInfo **resNums, size_t len) {
+    sort(resNums, len, compareByVisitorName);
+}
+
+void visitorListSortByHealthCode(VisitorInfo **resNums, size_t len) {
+    sort(resNums, len, compareByVisitorHealthCode);
 }

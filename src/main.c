@@ -13,7 +13,7 @@ int main() {
 
     visitorInfoListToNums(nums, list);
 
-    visitorListSortByName(nums, list);
+    visitorListSortByHealthCode(nums, list->data->healthCode);
 
     for (int i = 0; i < list->data->healthCode; i++) {
         printVisitorData(nums[i]);

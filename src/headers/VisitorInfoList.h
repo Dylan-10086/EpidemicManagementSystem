@@ -57,7 +57,10 @@ void saveVisitorInfoListToFile(const char *fileName, VisitorInfoList *head);
 
 void readVisitorInfoListFromFile(const char *fileName, VisitorInfoList *head);
 
-void visitorListSortByName(VisitorInfo **resNums, VisitorInfoList *head);
+void visitorListSortByName(VisitorInfo **resNums, size_t len);
+
+void visitorListSortByHealthCode(VisitorInfo **resNums, size_t len);
+
 #define LINKLIST_LINKLIST_H
 
 #endif //LINKLIST_LINKLIST_H
