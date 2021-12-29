@@ -147,7 +147,7 @@ void readResidentInfoListFromFile(const char *fileName, ResidentInfoList *head) 
     char name[20], phoneNum[20];
     int buildingNum, houseNum;
     HealthCode healthCode;
-    bool isolation;
+    int isolation;
 
     while (fscanf(file, "%s %s %d %d %hu %d", name, phoneNum, &buildingNum, &houseNum, &healthCode, &isolation) !=
            EOF) {
