@@ -40,7 +40,16 @@ VisitorInfoList *createVisitorInfoList();
 
 void removeVisitorInfoByIndex(VisitorInfoList *head, size_t index);
 
-void visitorInfoListToNums(VisitorInfo **nums, VisitorInfoList *head);
+/**
+ * 变成数组
+ * @param desNums
+ * @param head
+ *
+ * 使用方法:
+ * VisitorInfo *nums[head->data->healthCode];
+ * visitorInfoListToNums(nums, head);
+ */
+void visitorInfoListToNums(VisitorInfo **desNums, VisitorInfoList *head);
 
 void printVisitorInfoList(VisitorInfoList *head);
 
@@ -48,6 +57,7 @@ void saveVisitorInfoListToFile(const char *fileName, VisitorInfoList *head);
 
 void readVisitorInfoListFromFile(const char *fileName, VisitorInfoList *head);
 
+void visitorListSortByName(VisitorInfo **resNums, VisitorInfoList *head);
 #define LINKLIST_LINKLIST_H
 
 #endif //LINKLIST_LINKLIST_H

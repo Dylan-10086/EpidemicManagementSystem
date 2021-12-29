@@ -91,12 +91,12 @@ VisitorInfoList *getVisitorInfoByIndex(VisitorInfoList *head, size_t index) {
     return p->next;
 }
 
-void visitorInfoListToNums(VisitorInfo **nums, VisitorInfoList *head) {
+void visitorInfoListToNums(VisitorInfo **desNums, VisitorInfoList *head) {
     size_t len = head->data->healthCode;
     head = head->next;
 
     for (int i = 0; i < len; i++, head = head->next) {
-        nums[i] = head->data;
+        desNums[i] = head->data;
     }
 }
 
@@ -143,3 +143,26 @@ void readVisitorInfoListFromFile(const char *fileName, VisitorInfoList *head) {
     }
 }
 
+void sort(VisitorInfo **nums, size_t len, int (*compare)(const void *, const void *)) {
+    for (int i = 0; i < len - 1; i++) {
+        for (int j = i + 1; j < len; j++) {
+            if (compare(nums[i], nums[j]) > 0) {
+                VisitorInfo *temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+            }
+        }
+    }
+}
+
+int compareByVisitorName(const void *item1, const void *item2) {
+    return strcmp(((VisitorInfo *) item1)->name, ((VisitorInfo *) item2)->name);
+}
+
+int compareByVisitorHealthCode(const void *item1, const void *item2) {
+    return ((VisitorInfo *) item1)->healthCode - ((VisitorInfo *) item2)->healthCode;
+}
+
+void visitorListSortByName(VisitorInfo **resNums, VisitorInfoList *head) {
+    sort(resNums, head->data->healthCode, compareByVisitorName);
+}

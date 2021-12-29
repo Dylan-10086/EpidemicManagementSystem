@@ -9,7 +9,14 @@ int main() {
 
     readVisitorInfoListFromFile("../Data/visitorData.txt", list);
 
-    saveVisitorInfoListToFile("../Data/visitorData.txt", list);
-    printVisitorInfoList(list);
+    VisitorInfo *nums[list->data->healthCode];
+
+    visitorInfoListToNums(nums, list);
+
+    visitorListSortByName(nums, list);
+
+    for (int i = 0; i < list->data->healthCode; i++) {
+        printVisitorData(nums[i]);
+    }
     return 0;
 }
