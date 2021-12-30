@@ -71,6 +71,42 @@ ResidentInfoList *fromNums(ResidentInfo val[], size_t len) {
     return head;
 }
 
+bool rEqual(ResidentInfo *info1, ResidentInfo *info2) {
+    if (strcmp(info1->name, info2->name) != 0) {
+        return false;
+    }
+    if (strcmp(info1->phoneNum, info2->phoneNum) != 0) {
+        return false;
+    }
+    if (info1->buildingNum != info2->buildingNum) {
+        return false;
+    }
+    if (info1->houseNum != info2->houseNum) {
+        return false;
+    }
+    if (info1->healthCode != info2->healthCode) {
+        return false;
+    }
+    if (info1->isolation != info2->isolation) {
+        return false;
+    }
+    return true;
+}
+
+bool removeResidentInfo(ResidentInfoList *head, ResidentInfo *info) {
+
+    while (head != NULL && !rEqual(head->next->data, info)) {
+        head = head->next;
+    }
+
+    if (head) {
+        head->next = head->next->next;
+        return true;
+    } else {
+        return false;
+    }
+}
+
 void removeResidentInfoByIndex(ResidentInfoList *head, size_t index) {
     assert(index < head->data->healthCode);
 

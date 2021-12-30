@@ -39,6 +39,7 @@ ResidentInfoList *createResidentInfoList();
 
 void removeResidentInfoByIndex(ResidentInfoList *head, size_t index);
 
+bool removeResidentInfo(ResidentInfoList *head, ResidentInfo *info);
 
 void residentInfoListToNums(ResidentInfo **nums, ResidentInfoList *head);
 

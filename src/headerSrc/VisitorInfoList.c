@@ -60,6 +60,41 @@ VisitorInfoList *createVisitorInfoListFromNums(VisitorInfo val[], size_t len) {
     return head;
 }
 
+bool vEqual(VisitorInfo *info1, VisitorInfo *info2) {
+    if (strcmp(info1->name, info2->name) != 0) {
+        return false;
+    }
+    if (strcmp(info1->phone, info2->phone) != 0) {
+        return false;
+    }
+    if (info1->arriveTime != info2->arriveTime) {
+        return false;
+    }
+    if (info1->leaveTime != info2->leaveTime) {
+        return false;
+    }
+    if (strcmp(info1->fromWhere, info2->fromWhere) != 0) {
+        return false;
+    }
+    if (info1->healthCode != info2->healthCode) {
+        return false;
+    }
+    return true;
+}
+
+bool removeResidentInfo(VisitorInfoList *head, VisitorInfo *info) {
+    while (head != NULL && !vEqual(head->next->data, info)) {
+        head = head->next;
+    }
+
+    if (head) {
+        head->next = head->next->next;
+        return true;
+    } else {
+        return false;
+    }
+}
+
 void removeVisitorInfoByIndex(VisitorInfoList *head, size_t index) {
     assert(index < head->data->healthCode);
 
