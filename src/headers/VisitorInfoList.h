@@ -38,7 +38,7 @@ VisitorInfoList *createVisitorInfoListNode(VisitorInfo *val);
 
 VisitorInfoList *createVisitorInfoList();
 
-bool removeResidentInfo(VisitorInfoList *head, VisitorInfo *info);
+bool removeVisitorInfo(VisitorInfoList *head, VisitorInfo *info);
 
 void removeVisitorInfoByIndex(VisitorInfoList *head, size_t index);
 

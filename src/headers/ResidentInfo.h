@@ -40,8 +40,4 @@ void printResidentData(ResidentInfo *data);
 
 void saveResidentInfoToFile(FILE *file, ResidentInfo *info);
 
-
-
-
-
 #endif //EPIDEMICMANAGEMENTSYSTEM_RESIDENTINFO_H

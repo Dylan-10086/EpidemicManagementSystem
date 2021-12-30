@@ -82,7 +82,7 @@ bool vEqual(VisitorInfo *info1, VisitorInfo *info2) {
     return true;
 }
 
-bool removeResidentInfo(VisitorInfoList *head, VisitorInfo *info) {
+bool removeVisitorInfo(VisitorInfoList *head, VisitorInfo *info) {
     while (head != NULL && !vEqual(head->next->data, info)) {
         head = head->next;
     }
