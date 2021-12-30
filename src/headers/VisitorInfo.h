@@ -16,7 +16,7 @@ typedef struct vInfo {
     char name[20];
     char phone[20];
 
-    // 时间储存的是从1970年开始到输入时间到ms数
+    // 时间储存的是从1970年开始到输入时间到秒数
     time_t arriveTime;
     time_t leaveTime;
 
