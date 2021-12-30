@@ -71,10 +71,12 @@ void getVisitorArriveTime(VisitorInfo *data) {
 
     Time *time = (Time *) malloc(sizeof(Time));
     time->tm_year = year - 1900;
-    time->tm_mon = month;
+    time->tm_mon = month - 1;
     time->tm_mday = day;
     time->tm_hour = hour;
     time->tm_min = min;
+    time->tm_sec = 0;
+    time->tm_isdst = 0;
 
     while (!isTimeValid(time)) {
         printf("输入错误,请重新输入!\n");
@@ -87,7 +89,7 @@ Time *createTime(int year, int mon, int day, int hour, int min) {
     Time *time = (Time *) malloc(sizeof(Time));
 
     time->tm_year = year - 1900;
-    time->tm_mon = mon;
+    time->tm_mon = mon - 1;
     time->tm_mday = day;
     time->tm_hour = hour;
     time->tm_min = min;
@@ -108,7 +110,7 @@ void getVisitorLeaveTime(VisitorInfo *data) {
     Time *time = (Time *) malloc(sizeof(Time));
 
     time->tm_year = year - 1900;
-    time->tm_mon = month;
+    time->tm_mon = month - 1;
     time->tm_mday = day;
     time->tm_hour = hour;
     time->tm_min = min;

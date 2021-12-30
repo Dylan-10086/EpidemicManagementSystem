@@ -39,6 +39,7 @@ ResidentInfoList *createResidentInfoList();
 
 void removeResidentInfoByIndex(ResidentInfoList *head, size_t index);
 
+
 void residentInfoListToNums(ResidentInfo **nums, ResidentInfoList *head);
 
 void printResidentList(ResidentInfoList *head);
@@ -56,6 +57,8 @@ void residentListSortByAddress(ResidentInfo **resNums, size_t len);
 void residentListSortByIsolation(ResidentInfo **resNums, size_t len);
 
 ResidentInfoList *residentListSearchByName(ResidentInfoList *head, const char *name);
+
+ResidentInfoList *residentListSearchByPhone(ResidentInfoList *head, const char *phone);
 
 ResidentInfoList *residentListSearchByHealthCode(ResidentInfoList *head, HealthCode healthCode);
 

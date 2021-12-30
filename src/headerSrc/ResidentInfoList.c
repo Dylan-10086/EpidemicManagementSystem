@@ -241,6 +241,26 @@ ResidentInfoList *residentListSearchByName(ResidentInfoList *head, const char *n
     }
 }
 
+ResidentInfoList *residentListSearchByPhone(ResidentInfoList *head, const char *phone) {
+    ResidentInfoList *res = createResidentInfoList();
+    bool flag = false;
+
+    head = head->next;
+    while (head) {
+        if (strcmp(head->data->phoneNum, phone) == 0) {
+            flag = true;
+            appendResidentInfo(res, head->data);
+        }
+        head = head->next;
+    }
+
+    if (flag) {
+        return res;
+    } else {
+        return NULL;
+    }
+}
+
 ResidentInfoList *residentListSearchByHealthCode(ResidentInfoList *head, HealthCode healthCode) {
     ResidentInfoList *res = createResidentInfoList();
     bool flag = false;

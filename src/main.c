@@ -3,32 +3,29 @@
 #include "headers/VisitorInfo.h"
 #include "headers/VisitorInfoList.h"
 
+#define visitorFile "../Data/visitorData.txt"
+#define residentFile "../Data/residentData.txt"
+
 
 int main() {
     VisitorInfoList *list = createVisitorInfoList();
-    ResidentInfoList *residentInfoList = createResidentInfoList();
+
+//    appendVisitorInfo(list, getVisitorInfo(createVisitorInfo()));
+//    saveVisitorInfoListToFile(visitorFile, list);
 
     readVisitorInfoListFromFile("../Data/visitorData.txt", list);
-    readResidentInfoListFromFile("../Data/residentData.txt", residentInfoList);
 
     VisitorInfo *nums1[list->data->healthCode];
-    ResidentInfo *nums2[residentInfoList->data->healthCode];
 
     visitorInfoListToNums(nums1, list);
-    residentInfoListToNums(nums2, residentInfoList);
 
-    visitorListSortByFromWhere(nums1, list->data->healthCode);
-    residentListSortByIsolation(nums2, residentInfoList->data->healthCode);
+    visitorListSortByName(nums1, list->data->healthCode);
 
     for (int i = 0; i < list->data->healthCode; i++) {
         printVisitorData(nums1[i]);
     }
+    printf("\n");
 
-    for (int i = 0; i < residentInfoList->data->healthCode; i++) {
-        printResidentData(nums2[i]);
-    }
-
-    printResidentList(residentListSearchByHouseNum(residentInfoList, 3));
-    printVisitorInfoList(visitorListSearchByHealthCode(list, 0));
+    printVisitorInfoList(visitorListSearchByArrive(list, createTime(2021, 2, 1, 12, 00)));
     return 0;
 }

@@ -18,11 +18,11 @@ bool isResidentAddressValid(int buildingNum, int houseNum) {
 }
 
 bool isTimeValid(Time *time) {
-    if (time->tm_mon <= 0 || time->tm_mon > 12) {
+    if (time->tm_mon < 0 || time->tm_mon > 12) {
         return false;
     }
 
-    if (time->tm_mday <= 0 || time->tm_mday > 31) {
+    if (time->tm_mday < 0 || time->tm_mday > 31) {
         return false;
     }
 

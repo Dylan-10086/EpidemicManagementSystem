@@ -102,12 +102,16 @@ void visitorInfoListToNums(VisitorInfo **desNums, VisitorInfoList *head) {
 }
 
 void printVisitorInfoList(VisitorInfoList *head) {
-    head = head->next;
-    while (head) {
-        printVisitorData(head->data);
+    if (head == NULL) {
+        printf("无数据!\n");
+    } else {
         head = head->next;
+        while (head) {
+            printVisitorData(head->data);
+            head = head->next;
+        }
+        printf("\n");
     }
-    printf("\n");
 }
 
 void saveVisitorInfoListToFile(const char *fileName, VisitorInfoList *head) {
@@ -236,8 +240,9 @@ VisitorInfoList *visitorListSearchByPhone(VisitorInfoList *head, const char *pho
     }
 }
 
-bool timeInRatio(time_t base, time_t target, int ratioMin) {
-    return base - ratioMin * 6000 <= target && base + ratioMin * 6000;
+bool timeInRatio(time_t base, time_t target) {
+    static int radio = 1800;
+    return base - radio <= target && target <= base + radio;
 }
 
 VisitorInfoList *visitorListSearchByArrive(VisitorInfoList *head, Time *time) {
@@ -246,7 +251,7 @@ VisitorInfoList *visitorListSearchByArrive(VisitorInfoList *head, Time *time) {
 
     head = head->next;
     while (head) {
-        if (timeInRatio(head->data->arriveTime, mktime(time), 30)) {
+        if (timeInRatio(head->data->arriveTime, mktime(time))) {
             flag = true;
             appendVisitorInfo(res, head->data);
         }
@@ -266,7 +271,7 @@ VisitorInfoList *visitorListSearchByLeave(VisitorInfoList *head, Time *time) {
 
     head = head->next;
     while (head) {
-        if (timeInRatio(head->data->leaveTime, mktime(time), 30)) {
+        if (timeInRatio(head->data->leaveTime, mktime(time))) {
             flag = true;
             appendVisitorInfo(res, head->data);
         }
