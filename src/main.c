@@ -27,5 +27,8 @@ int main() {
     for (int i = 0; i < residentInfoList->data->healthCode; i++) {
         printResidentData(nums2[i]);
     }
+
+    printResidentList(residentListSearchByHouseNum(residentInfoList, 3));
+    printVisitorInfoList(visitorListSearchByHealthCode(list, 0));
     return 0;
 }

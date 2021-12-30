@@ -47,4 +47,22 @@ void saveResidentInfoListToFile(const char *fileName, ResidentInfoList *head);
 
 void readResidentInfoListFromFile(const char *fileName, ResidentInfoList *head);
 
+void residentListSortByName(ResidentInfo **resNums, size_t len);
+
+void residentListSortByHealthCode(ResidentInfo **resNums, size_t len);
+
+void residentListSortByAddress(ResidentInfo **resNums, size_t len);
+
+void residentListSortByIsolation(ResidentInfo **resNums, size_t len);
+
+ResidentInfoList *residentListSearchByName(ResidentInfoList *head, const char *name);
+
+ResidentInfoList *residentListSearchByHealthCode(ResidentInfoList *head, HealthCode healthCode);
+
+ResidentInfoList *residentListSearchByBuildingNum(ResidentInfoList *head, int bNum);
+
+ResidentInfoList *residentListSearchByHouseNum(ResidentInfoList *head, int hNum);
+
+ResidentInfoList *residentListSearchByIsolation(ResidentInfoList *head, int isolation);
+
 #endif //EPIDEMICMANAGEMENTSYSTEM_RESIDENTINFOLIST_H

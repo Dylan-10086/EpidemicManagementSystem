@@ -70,7 +70,7 @@ void getVisitorArriveTime(VisitorInfo *data) {
     scanf("%d %d %d %d %d", &year, &month, &day, &hour, &min);
 
     Time *time = (Time *) malloc(sizeof(Time));
-    time->tm_year = year;
+    time->tm_year = year - 1900;
     time->tm_mon = month;
     time->tm_mday = day;
     time->tm_hour = hour;
@@ -83,6 +83,21 @@ void getVisitorArriveTime(VisitorInfo *data) {
     data->arriveTime = mktime(time);
 }
 
+Time *createTime(int year, int mon, int day, int hour, int min) {
+    Time *time = (Time *) malloc(sizeof(Time));
+
+    time->tm_year = year - 1900;
+    time->tm_mon = mon;
+    time->tm_mday = day;
+    time->tm_hour = hour;
+    time->tm_min = min;
+    time->tm_sec = 0;
+    time->tm_isdst = 0;
+
+    return time;
+}
+
+
 void getVisitorLeaveTime(VisitorInfo *data) {
     printf("\n请输入人员离开时间(?年?月?日?时?分, 空格隔开):\n");
 
@@ -92,7 +107,7 @@ void getVisitorLeaveTime(VisitorInfo *data) {
 
     Time *time = (Time *) malloc(sizeof(Time));
 
-    time->tm_year = year;
+    time->tm_year = year - 1900;
     time->tm_mon = month;
     time->tm_mday = day;
     time->tm_hour = hour;
@@ -166,8 +181,11 @@ void printVisitorData(VisitorInfo *data) {
             break;
     }
 
-    printf("%s %s %ld %ld %s %s\n", data->name, data->phone, data->arriveTime, data->leaveTime,
-           data->fromWhere, code);
+    char arrive[40], leave[40];
+    strftime(arrive, 40, "%Y-%m-%d(%H:%M)", localtime(&data->arriveTime));
+    strftime(leave, 40, "%Y-%m-%d(%H:%M)", localtime(&data->leaveTime));
+
+    printf("%s %s %s %s %s %s\n", data->name, data->phone, arrive, leave, data->fromWhere, code);
 }
 
 void saveVisitorInfoToFile(FILE *file, VisitorInfo *data) {

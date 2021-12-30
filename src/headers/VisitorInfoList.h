@@ -67,6 +67,18 @@ void visitorListSortByLeaveTime(VisitorInfo **resNums, size_t len);
 
 void visitorListSortByFromWhere(VisitorInfo **resNums, size_t len);
 
+VisitorInfoList *visitorListSearchByName(VisitorInfoList *head, const char *name);
+
+VisitorInfoList *visitorListSearchByPhone(VisitorInfoList *head, const char *phone);
+
+VisitorInfoList *visitorListSearchByArrive(VisitorInfoList *head, Time *time);
+
+VisitorInfoList *visitorListSearchByLeave(VisitorInfoList *head, Time *time);
+
+VisitorInfoList *visitorListSearchByFromWhere(VisitorInfoList *head, const char *place);
+
+VisitorInfoList *visitorListSearchByHealthCode(VisitorInfoList *head, HealthCode healthCode);
+
 
 #define LINKLIST_LINKLIST_H
 

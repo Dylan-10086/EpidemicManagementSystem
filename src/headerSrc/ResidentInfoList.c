@@ -113,12 +113,16 @@ void residentInfoListToNums(ResidentInfo **nums, ResidentInfoList *head) {
 }
 
 void printResidentList(ResidentInfoList *head) {
-    head = head->next;
-    while (head) {
-        printResidentData(head->data);
+    if (head == NULL) {
+        printf("无数据");
+    } else {
         head = head->next;
+        while (head) {
+            printResidentData(head->data);
+            head = head->next;
+        }
+        printf("\n");
     }
-    printf("\n");
 }
 
 void saveResidentInfoListToFile(const char *fileName, ResidentInfoList *head) {
@@ -215,4 +219,104 @@ void residentListSortByAddress(ResidentInfo **resNums, size_t len) {
 
 void residentListSortByIsolation(ResidentInfo **resNums, size_t len) {
     R_sort(resNums, len, compareByResidentIsolation);
+}
+
+ResidentInfoList *residentListSearchByName(ResidentInfoList *head, const char *name) {
+    ResidentInfoList *res = createResidentInfoList();
+    bool flag = false;
+
+    head = head->next;
+    while (head) {
+        if (strcmp(head->data->name, name) == 0) {
+            flag = true;
+            appendResidentInfo(res, head->data);
+        }
+        head = head->next;
+    }
+
+    if (flag) {
+        return res;
+    } else {
+        return NULL;
+    }
+}
+
+ResidentInfoList *residentListSearchByHealthCode(ResidentInfoList *head, HealthCode healthCode) {
+    ResidentInfoList *res = createResidentInfoList();
+    bool flag = false;
+
+    head = head->next;
+    while (head) {
+        if (head->data->healthCode == healthCode) {
+            flag = true;
+            appendResidentInfo(res, head->data);
+        }
+        head = head->next;
+    }
+
+    if (flag) {
+        return res;
+    } else {
+        return NULL;
+    }
+}
+
+ResidentInfoList *residentListSearchByBuildingNum(ResidentInfoList *head, int bNum) {
+    ResidentInfoList *res = createResidentInfoList();
+    bool flag = false;
+
+    head = head->next;
+    while (head) {
+        if (head->data->buildingNum == bNum) {
+            flag = true;
+            appendResidentInfo(res, head->data);
+        }
+        head = head->next;
+    }
+
+    if (flag) {
+        return res;
+    } else {
+        return NULL;
+    }
+}
+
+ResidentInfoList *residentListSearchByHouseNum(ResidentInfoList *head, int hNum) {
+    ResidentInfoList *res = createResidentInfoList();
+    bool flag = false;
+
+    head = head->next;
+    while (head) {
+        if (head->data->houseNum == hNum) {
+            flag = true;
+            appendResidentInfo(res, head->data);
+        }
+        head = head->next;
+    }
+
+    if (flag) {
+        return res;
+    } else {
+        return NULL;
+    }
+}
+
+ResidentInfoList *residentListSearchByIsolation(ResidentInfoList *head, int isolation) {
+    ResidentInfoList *res = createResidentInfoList();
+    bool flag = false;
+
+    head = head->next;
+    while (head) {
+        if (head->data->isolation == isolation) {
+            flag = true;
+            appendResidentInfo(res, head->data);
+        }
+        head = head->next;
+    }
+
+    if (flag) {
+        return res;
+    } else {
+        return NULL;
+    }
 }

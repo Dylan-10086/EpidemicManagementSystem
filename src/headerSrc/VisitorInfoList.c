@@ -196,3 +196,126 @@ void visitorListSortByFromWhere(VisitorInfo **resNums, size_t len) {
     V_sort(resNums, len, compareByVisitorFromWhere);
 }
 
+VisitorInfoList *visitorListSearchByName(VisitorInfoList *head, const char *name) {
+    VisitorInfoList *res = createVisitorInfoList();
+    bool flag = false;
+
+    head = head->next;
+    while (head) {
+        if (strcmp(head->data->name, name) == 0) {
+            flag = true;
+            appendVisitorInfo(res, head->data);
+        }
+        head = head->next;
+    }
+
+    if (flag) {
+        return res;
+    } else {
+        return NULL;
+    }
+}
+
+VisitorInfoList *visitorListSearchByPhone(VisitorInfoList *head, const char *phone) {
+    VisitorInfoList *res = createVisitorInfoList();
+    bool flag = false;
+
+    head = head->next;
+    while (head) {
+        if (strcmp(head->data->phone, phone) == 0) {
+            flag = true;
+            appendVisitorInfo(res, head->data);
+        }
+        head = head->next;
+    }
+
+    if (flag) {
+        return res;
+    } else {
+        return NULL;
+    }
+}
+
+bool timeInRatio(time_t base, time_t target, int ratioMin) {
+    return base - ratioMin * 6000 <= target && base + ratioMin * 6000;
+}
+
+VisitorInfoList *visitorListSearchByArrive(VisitorInfoList *head, Time *time) {
+    VisitorInfoList *res = createVisitorInfoList();
+    bool flag = false;
+
+    head = head->next;
+    while (head) {
+        if (timeInRatio(head->data->arriveTime, mktime(time), 30)) {
+            flag = true;
+            appendVisitorInfo(res, head->data);
+        }
+        head = head->next;
+    }
+
+    if (flag) {
+        return res;
+    } else {
+        return NULL;
+    }
+}
+
+VisitorInfoList *visitorListSearchByLeave(VisitorInfoList *head, Time *time) {
+    VisitorInfoList *res = createVisitorInfoList();
+    bool flag = false;
+
+    head = head->next;
+    while (head) {
+        if (timeInRatio(head->data->leaveTime, mktime(time), 30)) {
+            flag = true;
+            appendVisitorInfo(res, head->data);
+        }
+        head = head->next;
+    }
+
+    if (flag) {
+        return res;
+    } else {
+        return NULL;
+    }
+}
+
+VisitorInfoList *visitorListSearchByFromWhere(VisitorInfoList *head, const char *place) {
+    VisitorInfoList *res = createVisitorInfoList();
+    bool flag = false;
+
+    head = head->next;
+    while (head) {
+        if (strcmp(head->data->fromWhere, place) == 0) {
+            flag = true;
+            appendVisitorInfo(res, head->data);
+        }
+        head = head->next;
+    }
+
+    if (flag) {
+        return res;
+    } else {
+        return NULL;
+    }
+}
+
+VisitorInfoList *visitorListSearchByHealthCode(VisitorInfoList *head, HealthCode healthCode) {
+    VisitorInfoList *res = createVisitorInfoList();
+    bool flag = false;
+
+    head = head->next;
+    while (head) {
+        if (head->data->healthCode == healthCode) {
+            flag = true;
+            appendVisitorInfo(res, head->data);
+        }
+        head = head->next;
+    }
+
+    if (flag) {
+        return res;
+    } else {
+        return NULL;
+    }
+}

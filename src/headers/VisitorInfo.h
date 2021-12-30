@@ -52,5 +52,7 @@ void printVisitorData(VisitorInfo *data);
 
 void saveVisitorInfoToFile(FILE *file, VisitorInfo *data);
 
+Time *createTime(int year, int mon, int day, int hour, int min);
+
 
 #endif //EPIDEMICMANAGEMENTSYSTEM_VISITORINFO_H
