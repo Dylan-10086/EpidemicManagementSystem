@@ -61,6 +61,13 @@ void visitorListSortByName(VisitorInfo **resNums, size_t len);
 
 void visitorListSortByHealthCode(VisitorInfo **resNums, size_t len);
 
+void visitorListSortByArriveTime(VisitorInfo **resNums, size_t len);
+
+void visitorListSortByLeaveTime(VisitorInfo **resNums, size_t len);
+
+void visitorListSortByFromWhere(VisitorInfo **resNums, size_t len);
+
+
 #define LINKLIST_LINKLIST_H
 
 #endif //LINKLIST_LINKLIST_H

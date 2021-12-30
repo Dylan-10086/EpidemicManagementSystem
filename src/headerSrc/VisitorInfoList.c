@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include "../headers/VisitorInfoList.h"
+#include "../headers/Utils.h"
 #include <string.h>
 
 VisitorInfoList *createVisitorInfoList() {
@@ -143,7 +144,7 @@ void readVisitorInfoListFromFile(const char *fileName, VisitorInfoList *head) {
     }
 }
 
-void sort(VisitorInfo **nums, size_t len, int (*compare)(const void *, const void *)) {
+void V_sort(VisitorInfo **nums, size_t len, int (*compare)(const void *, const void *)) {
     for (int i = 0; i < len - 1; i++) {
         for (int j = i + 1; j < len; j++) {
             if (compare(nums[i], nums[j]) > 0) {
@@ -163,10 +164,35 @@ int compareByVisitorHealthCode(const void *item1, const void *item2) {
     return ((VisitorInfo *) item1)->healthCode - ((VisitorInfo *) item2)->healthCode;
 }
 
+int compareByVisitorArriveTime(const void *item1, const void *item2) {
+    return (int) (((VisitorInfo *) item1)->arriveTime - ((VisitorInfo *) item2)->arriveTime);
+}
+
+int compareByVisitorLeaveTime(const void *item1, const void *item2) {
+    return (int) (((VisitorInfo *) item1)->leaveTime - ((VisitorInfo *) item2)->leaveTime);
+}
+
+int compareByVisitorFromWhere(const void *item1, const void *item2) {
+    return strcmp(((VisitorInfo *) item1)->fromWhere, ((VisitorInfo *) item2)->fromWhere);
+}
+
 void visitorListSortByName(VisitorInfo **resNums, size_t len) {
-    sort(resNums, len, compareByVisitorName);
+    V_sort(resNums, len, compareByVisitorName);
 }
 
 void visitorListSortByHealthCode(VisitorInfo **resNums, size_t len) {
-    sort(resNums, len, compareByVisitorHealthCode);
+    V_sort(resNums, len, compareByVisitorHealthCode);
 }
+
+void visitorListSortByArriveTime(VisitorInfo **resNums, size_t len) {
+    V_sort(resNums, len, compareByVisitorArriveTime);
+}
+
+void visitorListSortByLeaveTime(VisitorInfo **resNums, size_t len) {
+    V_sort(resNums, len, compareByVisitorLeaveTime);
+}
+
+void visitorListSortByFromWhere(VisitorInfo **resNums, size_t len) {
+    V_sort(resNums, len, compareByVisitorFromWhere);
+}
+

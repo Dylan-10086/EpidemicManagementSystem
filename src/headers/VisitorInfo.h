@@ -34,26 +34,19 @@ initVisitorInfo(VisitorInfo *data, char *name, char *phone, long arrive, long le
 
 VisitorInfo *getVisitorInfo(VisitorInfo *data);
 
-
 void getVisitorName(VisitorInfo *data);
-
 
 void getVisitorPhoneNum(VisitorInfo *data);
 
-
 void getVisitorArriveTime(VisitorInfo *data);
-
 
 void getVisitorLeaveTime(VisitorInfo *data);
 
 void getVisitorFromWhere(VisitorInfo *data);
 
-
 void getVisitorHealthCode(VisitorInfo *data);
 
-
 void getVisitorRemarks(VisitorInfo *data);
-
 
 void printVisitorData(VisitorInfo *data);
 

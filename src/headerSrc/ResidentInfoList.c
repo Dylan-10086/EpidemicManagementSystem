@@ -164,8 +164,55 @@ void readResidentInfoListFromFile(const char *fileName, ResidentInfoList *head) 
                         isolation
                 ));
     }
-
-
 }
 
+void R_sort(ResidentInfo **nums, size_t len, int (*compare)(const void *, const void *)) {
+    for (int i = 0; i < len - 1; i++) {
+        for (int j = i + 1; j < len; j++) {
+            if (compare(nums[i], nums[j]) > 0) {
+                ResidentInfo *temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+            }
+        }
+    }
+}
 
+int compareByResidentName(const void *item1, const void *item2) {
+    return strcmp(((ResidentInfo *) item1)->name, ((ResidentInfo *) item2)->name);
+}
+
+int compareByResidentHealthCode(const void *item1, const void *item2) {
+    return ((ResidentInfo *) item1)->healthCode - ((ResidentInfo *) item2)->healthCode;
+}
+
+int compareByResidentAddress(const void *item1, const void *item2) {
+    int bNum1, bNum2, hNum1, hNum2;
+
+    bNum1 = ((ResidentInfo *) item1)->buildingNum;
+    bNum2 = ((ResidentInfo *) item2)->buildingNum;
+    hNum1 = ((ResidentInfo *) item1)->houseNum;
+    hNum2 = ((ResidentInfo *) item2)->houseNum;
+
+    return bNum1 * 10000 + hNum1 - bNum2 * 10000 - hNum2;
+}
+
+int compareByResidentIsolation(const void *item1, const void *item2) {
+    return ((ResidentInfo *) item1)->isolation - ((ResidentInfo *) item2)->isolation;
+}
+
+void residentListSortByName(ResidentInfo **resNums, size_t len) {
+    R_sort(resNums, len, compareByResidentName);
+}
+
+void residentListSortByHealthCode(ResidentInfo **resNums, size_t len) {
+    R_sort(resNums, len, compareByResidentHealthCode);
+}
+
+void residentListSortByAddress(ResidentInfo **resNums, size_t len) {
+    R_sort(resNums, len, compareByResidentAddress);
+}
+
+void residentListSortByIsolation(ResidentInfo **resNums, size_t len) {
+    R_sort(resNums, len, compareByResidentIsolation);
+}

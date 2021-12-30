@@ -40,5 +40,13 @@ void printResidentData(ResidentInfo *data);
 
 void saveResidentInfoToFile(FILE *file, ResidentInfo *info);
 
+void residentListSortByName(ResidentInfo **resNums, size_t len);
+
+void residentListSortByHealthCode(ResidentInfo **resNums, size_t len);
+
+void residentListSortByAddress(ResidentInfo **resNums, size_t len);
+
+void residentListSortByIsolation(ResidentInfo **resNums, size_t len);
+
 
 #endif //EPIDEMICMANAGEMENTSYSTEM_RESIDENTINFO_H
